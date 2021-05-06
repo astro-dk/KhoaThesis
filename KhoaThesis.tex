@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{amsmath,amssymb,amsthm,IEEEtrantools,hyperref,esint,multicol}
+\usepackage{tikz,pgf,fancyhdr,pgfplots,lmodern,transparent}
+\usepackage{float, graphicx, physics, titling, cite, bm}
+\usepackage{array,multirow,textgreek}
+\usepackage[justification=centering]{caption}
+\usepackage[export]{adjustbox}
+\usepackage[nopostdot, nonumberlist, nogroupskip, toc, automake]{glossaries}
+\usepackage[nottoc]{tocbibind}
+\usepackage[includeheadfoot, left=1.2cm, right=1.2cm, bottom=3cm, top=3cm]{geometry}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=green,      
+    urlcolor=violet,
+}
+
+\pgfplotsset{width=10cm,compat=1.9}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Bachelor Thesis}
+\cfoot{\thepage}
+\lfoot{\includegraphics[scale=0.02,valign=c]{/home/khoa/Documents/Default/Logos/USTH_logo.png}}
+\rfoot{\includegraphics[scale=0.1,valign=c]{/home/khoa/Documents/Default/Logos/SA_logo.png}}
+
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\addtolength{\footskip}{0.5cm}
+\setlength{\headheight}{15pt}
+\newcommand{\la}{\left\langle}
+\newcommand{\ra}{\right\rangle}
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+\theoremstyle{plain}\newtheorem{ques}{Question}
+\theoremstyle{definition}\newtheorem*{ans}{Answer}
+
+\author{Nguyen Hoang Dang Khoa}
+\title{Mean-field study of the equation of states of nuclear matter and tidal deformation of neutron star}
+\date{\today}
+
+\makeglossaries
+\newglossaryentry{NS}{name={NS}, description={Neutron Star}}
+\newglossaryentry{NM}{name={NM}, description={Nuclear Matter}}
+\newglossaryentry{EoS}{name={EoS}, description={Equation of States}}
+\newglossaryentry{TOV}{name={TOV}, description={Tolmann-Oppenheimer-Volkoff}}
+\newglossaryentry{HF}{name={HF}, description={Hartree-Fock}}
+\newglossaryentry{GR}{name={GR}, description={General Relativity}}
+\newglossaryentry{GE}{name={GE}, description={Gravito-electric}}
+\newglossaryentry{GM}{name={GM}, description={Gravito-magnetic}}
+\newglossaryentry{NN}{name={NN}, description={Nucleon-Nucleon}}
+
+\newcolumntype{C}{>{$}c<{$}}
+
+\begin{document}
+        \begin{titlepage}
+                \centering
+                \newgeometry{top=1cm, bottom=2cm, left=2.5cm, right=2.5cm}
+                {\transparent{0.9}\includegraphics[scale=0.08,valign=c]{/home/khoa/Documents/Default/Logos/USTH_logo.png}\par}
+                \vspace{0.3cm}
+                {\scshape\Large University of Science and Technology of Hanoi \par}
+                \vspace{6.3cm}
+                \rule[-9pt]{\textwidth}{0.7pt}\par
+                \rule{\textwidth}{1.6pt}\par
+                \vspace{0.3cm}
+                {\Huge\bfseries \thetitle\par}
+                \vspace{0.2cm}
+                {\Large\bfseries Bachelor Thesis\par}
+                \vspace{0.3cm}
+                \rule{\textwidth}{1.6pt}\par
+                \rule[10pt]{\textwidth}{0.7pt}\par
+                \vspace{0.5cm}
+                % {\Large \theauthor\par}
+                \begin{minipage}[t]{0.45\textwidth}
+                        \begin{flushleft}
+                                \emph{Author:}\\
+                                Nguyen Hoang Dang \textsc{Khoa}
+                        \end{flushleft}
+                \end{minipage}
+                \begin{minipage}[t]{0.3\textwidth}
+                        \begin{flushright}
+                                \emph{Supervisors:}\\
+                                Prof. Dao Tien \textsc{Khoa}\\
+                                Dr. Ngo Hai \textsc{Tan}
+                        \end{flushright}
+                \end{minipage}
+                % \vspace{0.2cm}
+                % {\large\bfseries BI9-128\par}
+                \vfill
+                {\large \thedate\par}
+        \end{titlepage}  
+        
+        \restoregeometry
+        \tableofcontents
+
+        \printglossary[title={List of Abbreviations}]
+
+        \chapter{Introduction}
+        \input{chap/1_intro.tex}
+
+        \chapter{Hartree-Fock Calculation}
+        \input{chap/2_hf.tex}
+
+        \chapter{Neutron Star Properties}
+        \input{chap/3_tov.tex}
+
+        \clearpage
+        \bibliographystyle{unsrt}
+        \bibliography{ref}
+\end{document}

@@ -1,0 +1,30 @@
+\section{Tolman-Oppenheimer-Volkoff Equation}%
+\label{sec:tolman_oppenheimer_volkoff_equation}
+
+In the framework of \gls{GR}, assume the \gls{NS} to be in a static, isotropic region of spacetime, the metric elements are then
+\begin{equation}
+        c^2 d\tau^2 = g_{\mu\nu} dx^\mu dx^\nu = e^{2\nu(r)}c^2 dt^2 - e^{2\lambda(r)} dr^2 - r^2 d\theta^2 - r^2\sin^2\theta d\phi^2
+\end{equation}
+Inside the \gls{NS}, we have \cite{glendenning2012compact} the energy-momentum tensor as
+\begin{equation}
+        T^{\mu\nu} = - Pg^{\mu\nu} + (P + \varepsilon) u^\mu u^\nu
+\end{equation}
+where $u^\mu = dx^\mu/d\tau$ is the local fluid 4-velocity. Solving the Einstein's field equation \cite{glendenning2012compact}
+\begin{equation}
+        G^{\mu\nu} = - \frac{8\pi G}{c^4} T^{\mu\nu} 
+\end{equation}
+gives the Tolman-Oppenheimer-Volkoff (\gls{TOV}) equation
+\begin{IEEEeqnarray}{rCl}
+        \frac{dP}{dr} &=& - \frac{G\varepsilon(P)m}{c^2 r^2} \left( 1+ \frac{P}{\varepsilon(P)} \right) \left( 1+ \frac{4\pi P r^3}{m c^2}  \right) \left( 1- \frac{2Gm}{c^2 r}  \right)^{-1}\\
+        \frac{dm}{dr} &=& \frac{4\pi r^2\varepsilon(P)}{c^2}
+\end{IEEEeqnarray}  
+where $\varepsilon(P)$ can be obtained from the CDM3Y$n$ interaction calculated previously. Additional boundary conditions are
+\begin{equation*}
+        P(0)=P_c;\qquad P(R)=0;\qquad m(0)=0;\qquad m(R)=M
+\end{equation*}
+and by varying the center pressure $P_c$, a relation of the mass $M$ and radius $R$ of the \gls{NS} can be obtained.
+
+\section{Gravito-electric and Gravito-magnetic Tidal Deformation}%
+\label{sec:gravito_electric_and_gravito_magnetic_tidal_deformation}
+
+Pertubing
