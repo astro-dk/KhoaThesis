@@ -3,7 +3,7 @@
 \usepackage{tikz,pgf,fancyhdr,pgfplots,lmodern,transparent}
 \usepackage{float, graphicx, physics, titling, cite, bm}
 \usepackage{array,multirow,textgreek}
-\usepackage[justification=centering]{caption}
+\usepackage[justification=centering, font=small]{caption}
 \usepackage[export]{adjustbox}
 \usepackage[nopostdot, nonumberlist, toc, automake]{glossaries}
 \usepackage[nottoc]{tocbibind}
@@ -51,6 +51,8 @@
 \newglossaryentry{GM}{name={GM}, description={Gravito-magnetic}}
 \newglossaryentry{NN}{name={NN}, description={Nucleon-Nucleon}}
 \newglossaryentry{GW}{name={GW}, description={Gravitational wave}}
+\newglossaryentry{GRB}{name={GRB}, description={Gamma-ray burst}}
+\newglossaryentry{BH}{name={BH}, description={Black hole}}
 
 \newcolumntype{C}{>{$}c<{$}}
 
@@ -97,10 +99,12 @@
 
         \printglossary[title={List of Abbreviations}]
 
+        \captionsetup{width=0.9\linewidth}
+
         \chapter{Introduction}
         \input{chap/1_intro.tex}
 
-        \chapter{Hartree-Fock Calculation}
+        \chapter{Hartree-Fock Formalism}
         \input{chap/2_hf.tex}
 
         \chapter{Neutron Star Properties}
