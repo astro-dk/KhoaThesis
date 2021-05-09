@@ -98,17 +98,28 @@
         \tableofcontents
 
         \printglossary[title={List of Abbreviations}]
+        \listoftables
+        \listoffigures
 
         \captionsetup{width=0.9\linewidth}
 
         \chapter{Introduction}
+        \label{chap:intro}
         \input{chap/1_intro.tex}
 
-        \chapter{Hartree-Fock Formalism}
+        \chapter{Hartree-Fock Formalism of Nuclear Matter}
+        \label{chap:hf}
         \input{chap/2_hf.tex}
 
         \chapter{Neutron Star Properties}
+        \label{chap:ns_prop}
         \input{chap/3_tov.tex}
+
+        \chapter{Discussions}
+        \label{chap:discuss}
+        
+        \chapter{Conclusions}
+        \label{chap:conclusion}
 
         \clearpage
         \bibliographystyle{unsrt}

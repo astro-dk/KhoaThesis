@@ -1,7 +1,7 @@
 \section{Nucleon-Nucleon Interaction}%
 \label{sec:nucleon_nucleon_interaction}
 
-Due to the lack of a exact theory to describe the nucleon-nucleon (\gls{NN}) interaction, a model need to be imposed and fit with experimental measurement or theoretical calculation results. For a system as massive as a \gls{NS}, deducing the \gls{EoS} using the \emph{ab initio} method, i.e. solving the Schr\"{o}dinger equation over all particles, is simply impossible, therefore an \emph{effective interaction} must be used \cite{greiner1996nuclear}. In this section, we only limit ourselves to two-body interaction, thus, the \gls{NN} potential can be expressed in the form of
+Due to the lack of a exact theory to describe the nucleon-nucleon (\gls{NN}) interaction, a model need to be imposed and fit with experimental measurement or theoretical calculation results. Plus, for a system as massive as a \gls{NS}, deducing the \gls{EoS} using the \emph{ab initio} method, i.e. solving the Schr\"{o}dinger equation over all particles, is simply impossible, therefore an \emph{effective interaction} must be used \cite{greiner1996nuclear}. In this section, we only limit ourselves to two-body interaction, thus, the \gls{NN} potential can be expressed in the form of
 \begin{equation}
         v = v(\bm{r}, \bm{r'}, \bm{p}, \bm{p'}, \bm{\sigma}, \bm{\sigma'}, \bm{\tau}, \bm{\tau'})
         \label{eff_interaction}
@@ -24,19 +24,7 @@ The functional form of $v$ in \eqref{eff_interaction} cannot freely take any for
 
         \item \textbf{Rotational invariance:} The potential should be constructed such that the total angular momentum is zero.
                 
-        \item \textbf{Isospin invariance:} The isospin $\bm{\tau}$ only enters \eqref{eq2-3} through the \emph{isospin operator} $\bm{\hat{\tau}}$ and $\bm{\hat{\tau}'}$. The \gls{NN} interaction potential needs to be invariant under rotation in isospin space, in other words, it can only depend on the isospin-independent terms, the terms with $\bm{\tau}\cdot\bm{\tau'}$ and their higher powers. Coincide the isospin operator matrices with the Pauli matrices (since by definition they differ by only a conversion scaling factor), we have
-                \begin{equation}
-                        [\hat{\tau}_m, \hat{\tau}_n] = 2i \sum^{}_{k} \epsilon_{mnk} \hat{\tau}_k \quad\text{and}\quad \{\hat{\tau}_m, \hat{\tau}_n\} = 2\delta_{mn}
-                \end{equation}
-                adding the two equations together, we get the term
-                \begin{equation}
-                        \hat{\tau}_m \hat{\tau}_n = \delta_{mn} + i \sum^{}_{k} \epsilon_{mnk}\hat{\tau}_k
-                \end{equation}
-                Then we obtain the dot product
-                \begin{equation}
-                        (\bm{\hat{\tau}}\cdot\bm{\hat{\tau}'})^2 = \sum^{}_{m} \delta_{mm} - \sum^{}_{mnkk'} \epsilon_{mnk}\epsilon_{mnk'} \hat{\tau}_k \hat{\tau}'_{k'} = 3 - 2\bm{\hat{\tau}}\cdot\bm{\hat{\tau}'}
-                \end{equation}
-                Therefore, we can split the potential into
+        \item \textbf{Isospin invariance:} The \gls{NN} interaction potential needs to be invariant under rotation in isospin space, in other words, it can only depend on the isospin-independent terms and the terms with $\bm{\tau}\cdot\bm{\tau'}$. Therefore, we can split the potential into
                 \begin{equation}
                         v = v_0 (\bm{r},\bm{p},\bm{\sigma},\bm{\sigma'}) + v_1 (\bm{r},\bm{p},\bm{\sigma},\bm{\sigma'}) \bm{\hat{\tau}}\cdot\bm{\hat{\tau}'}
                 \end{equation}
@@ -73,7 +61,7 @@ and the form factor is adapted the form \cite{khoa1997nuclear,tan2020spin,tan202
 \section{Equation of States of Nuclear Matter}%
 \label{sec:equation_of_states_of_nuclear_matter}
 
-The total \gls{HF} energy of the system can be expressed as
+In \gls{HF} formalism, the total \gls{HF} energy of the system can be expressed as
 \begin{IEEEeqnarray*}{rCl}
         E &=& \sum^{}_{\sigma\tau} \sum^{k_F^{\sigma\tau}}_{\bm{k}} \frac{\hbar^2 k^2}{2m_\tau} + \frac{1}{2} \sum^{}_{\bm{k}\sigma\tau} \sum^{}_{\bm{k'}\sigma'\tau'} \left[ \matrixel{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^D}{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'} \right.\\
           && \left. \negmedspace{} + \matrixel{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^{EX}}{\bm{k'}\sigma\tau,\bm{k}\sigma'\tau'} \right]\IEEEyesnumber
@@ -83,7 +71,7 @@ where the single-particle wave function is plane wave
 \begin{equation}
         \ket{\bm{k}\sigma\tau} = \frac{e^{i\bm{k}\cdot\bm{r}}}{ \sqrt{ \Omega}  } \chi_\sigma \chi_\tau
 \end{equation}
-$\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 \rho_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$, $v^{D(EX)}$ is the direct (exchange) part of the interaction determined from the singlet and triplet-even (and odd) of the central \gls{NN} force. The direct and exchange interaction is then
+$\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 \rho_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$, $v^{D(EX)}$ is the direct (exchange) part of the interaction determined from the singlet and triplet-even (and odd) of the central \gls{NN} force. Adopting the same functional form of \eqref{eq2-11}, the direct and exchange interaction is written as
 \begin{IEEEeqnarray*}{rCl}
         v^{D(EX)}(\rho_b,r) &=& F^{D(EX)}_{00}(\rho_b) v^{D(EX)}_{00}(r) + F^{D(EX)}_{10}(\rho_b) v^{D(EX)}_{10}(r) \bm{\sigma}\cdot\bm{\sigma'}\\
                           &&\negmedspace{}+ F^{D(EX)}_{01}(\rho_b) v^{D(EX)}_{01}(r) \bm{\tau}\cdot\bm{\tau'}\\
