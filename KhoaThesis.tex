@@ -2,7 +2,7 @@
 \usepackage{amsmath,amssymb,amsthm,IEEEtrantools,hyperref,esint,multicol}
 \usepackage{tikz,pgf,fancyhdr,pgfplots,lmodern,transparent}
 \usepackage{float, graphicx, physics, titling, cite, bm}
-\usepackage{array,multirow,textgreek}
+\usepackage{array,multirow,alphabeta}
 \usepackage[justification=centering, font=small]{caption}
 \usepackage[export]{adjustbox}
 \usepackage[nopostdot, nonumberlist, toc, automake]{glossaries}
@@ -46,6 +46,7 @@
 \newglossaryentry{EoS}{name={EoS}, description={Equation of States}}
 \newglossaryentry{TOV}{name={TOV}, description={Tolmann-Oppenheimer-Volkoff}}
 \newglossaryentry{HF}{name={HF}, description={Hartree-Fock}}
+\newglossaryentry{BHF}{name={BHF}, description={Brueckner-Hartree-Fock}}
 \newglossaryentry{GR}{name={GR}, description={General Relativity}}
 \newglossaryentry{GE}{name={GE}, description={Gravito-electric}}
 \newglossaryentry{GM}{name={GM}, description={Gravito-magnetic}}
@@ -54,7 +55,9 @@
 \newglossaryentry{GRB}{name={GRB}, description={Gamma-ray burst}}
 \newglossaryentry{BH}{name={BH}, description={Black hole}}
 
+\newcolumntype{R}{>{$}r<{$}}
 \newcolumntype{C}{>{$}c<{$}}
+\newcolumntype{L}{>{$}l<{$}}
 
 \begin{document}
         \begin{titlepage}

@@ -39,7 +39,7 @@ The functional form of $v$ in \eqref{eff_interaction} cannot freely take any for
                         v(\bm{r},\bm{p},\bm{\sigma},\bm{\sigma'},\bm{\tau},\bm{\tau'}) = v(\bm{r},-\bm{p},-\bm{\sigma},-\bm{\sigma'},\bm{\tau},\bm{\tau'})
                 \end{equation}
 \end{itemize}
-Having the above considerations, developing further the M3Y-Paris interaction \cite{nakada2002method, nakada2003hartree, nakada2010erratum}
+Having the above considerations, developing further the M3Y-Paris interaction, which was used by the \gls{HF} study of \gls{NM} \cite{loan2011equation, tan2016mean, tan2020spin,tan2021equation} and the folding model study of \gls{NN} scattering \cite{khoa1997nuclear,khoa2000generalized},
 \begin{equation}
         v = v_{00}(r) + v_{10}(r) \bm{\sigma}\cdot\bm{\sigma'} + v_{01}(r) \bm{\tau}\cdot\bm{\tau'} + v_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})
 \end{equation}
@@ -49,21 +49,66 @@ by adding a density-dependent form factor to each term gives the CDM3Y$n$ intera
           &&\negmedspace{}+ F_{01}(\rho) v_{01}(r) \bm{\tau}\cdot\bm{\tau'} + F_{11}(\rho) v_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})\IEEEyesnumber
           \label{eq2-11}
 \end{IEEEeqnarray*}  
-where each radial term is the superposition of 3 Yukawa potentials with different parameters
+where each radial term is the superposition of 3 Yukawa potentials
 \begin{equation}
         v_{\sigma\tau}(r) = \sum^{3}_{k=1} Y_{\sigma\tau}(k) \frac{\exp(-\mu_k r)}{\mu_k r} 
 \end{equation}
-and the form factor is adapted the form \cite{khoa1997nuclear,tan2020spin,tan2021equation}
+and the form factor $F_{\sigma\tau}(\rho)$ shared the functional form \cite{khoa1997nuclear,tan2020spin,tan2021equation,than2010ufr}
 \begin{equation}
         F_{\sigma\tau}(\rho) = C_{\sigma\tau} [1 + \alpha_{\sigma\tau} \exp(-\beta_{\sigma\tau}\rho) + \gamma_{\sigma\tau}\rho]
 \end{equation}
+with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adjusted to give the corresponding incompressibility $K$ of symmetric \gls{NM} at saturation density $\rho_0$ and the binding energy $E_0 \approx 15.8\; MeV$, while the 10 term is modified from \cite{than2010ufr} to reproduce $E_{sym}(\rho_0) \approx 30\;MeV$, $L\approx 50\;MeV$ and to be in agreement with the ab-initio results \cite{akmal1998equation,gandolfi2010microscopic} at higher density \cite{tan2021equation}. On the other hand, the spin-dependent terms, 10 and 11, are hereby included in the 5 models by fine tuning the parameters to yield the same result as the Brueckner-Hartree-Fock (\gls{BHF}) study of spin polarized \gls{NM} \cite{vidana2002equation} as in Figure \ref{fig:bhf}.
+
+\begin{figure}[t]
+        \centering
+        \includegraphics[width=\textwidth]{fig/BHF_fit.eps}
+        \caption{Energy per baryon $E/A$ of symmetric \gls{NM} by the 5 CDM3Y$n$ models compared to \gls{BHF} result \cite{vidana2002equation}. The diamond and square represent the \gls{BHF} result for $\Delta_n=-\Delta_p=\pm 1$ and $\Delta_n=\Delta_p=\pm 1$ respectively, as well as the dashed and solid lines for the CDM3Y$n$ fit.}
+        \label{fig:bhf}
+\end{figure} 
+
+\begin{table}[H]
+        \centering
+        \caption{CDM3Y$n$ interaction's parameters \cite{tan2021equation}.}
+        \label{tab:cd}
+        \begin{tabular}{|C|C|C|C|C|C|C|}
+                \hline
+                \text{Interaction} & \sigma\tau & C_{\sigma\tau} & \alpha_{\sigma\tau} & \beta_{\sigma\tau} & \gamma_{\sigma\tau} & K\\
+                                   & & & & (fm^3) & (fm^3) & (MeV)\\
+                \hline
+                \multirow{4}{*}{\text{CDM3Y3}} & 00 & 0.2985 & 3.4528 & 2.6388 & -1.5 &\multirow{4}{*}{217}\\
+                                               & 01 & 0.2343 & 5.3336 & 6.4738 & 4.3172 &\\
+                                               & 10 & 0.3890 & 3.5635 & -2.6717 & 20.3624 &\\
+                                               & 11 & 0.8802 & 4.0433 & 12.3262 & 0.3662 &\\
+                \hline
+                \multirow{4}{*}{\text{CDM3Y4}} & 00 & 0.3052 & 3.2998 & 2.3180 & -2.0 &\multirow{4}{*}{228}\\
+                                               & 01 & 0.2129 & 6.3581 & 7.0584 & 5.6091 &\\
+                                               & 10 & 0.2593 & 6.0016 & -2.3377 & 18.8725 &\\
+                                               & 11 & 0.8329 & 3.5941 & 9.2012 & 0.2690 &\\
+                \hline
+                \multirow{4}{*}{\text{CDM3Y5}} & 00 & 0.2728 & 3.7367 & 1.8294 & -3.0 &\multirow{4}{*}{241}\\
+                                               & 01 & 0.2204 & 6.6146 & 7.9910 & 6.0040 &\\
+                                               & 10 & 0.4106 & 5.6265 & -1.6698 & -1.9866 &\\
+                                               & 11 & 0.6815 & 2.5833 & 5.1700 & 0.2578 &\\
+                \hline
+                \multirow{4}{*}{\text{CDM3Y6}} & 00 & 0.2658 & 3.8033 & 1.4099 & -4.0 &\multirow{4}{*}{252}\\
+                                               & 01 & 0.2313 & 6.6865 & 8.6775 & 6.0182 &\\
+                                               & 10 & 0.5186 & 9.9402 & 1.6698 & 2.9799 &\\
+                                               & 11 & 0.6058 & 3.1947 & 4.4512 & 0.0822 &\\
+                \hline
+                \multirow{4}{*}{\text{CDM3Y8}} & 00 & 0.2658 & 3.8033 & 1.4099 & -4.3 &\multirow{4}{*}{257}\\
+                                               & 01 & 0.2643 & 6.3836 & 9.8950 & 5.4249 &\\
+                                               & 10 & 0.5997 & 9.1900 & 0.7514 & -4.7181 &\\
+                                               & 11 & 0.3786 & 3.9435 & 2.7012 & 0.3512 &\\
+                \hline
+        \end{tabular}
+\end{table}
 
 \section{Equation of States of Nuclear Matter}%
 \label{sec:equation_of_states_of_nuclear_matter}
 
 In \gls{HF} formalism, the total \gls{HF} energy of the system can be expressed as
 \begin{IEEEeqnarray*}{rCl}
-        E &=& \sum^{}_{\sigma\tau} \sum^{k_F^{\sigma\tau}}_{\bm{k}} \frac{\hbar^2 k^2}{2m_\tau} + \frac{1}{2} \sum^{}_{\bm{k}\sigma\tau} \sum^{}_{\bm{k'}\sigma'\tau'} \left[ \matrixel{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^D}{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'} \right.\\
+        E_{HF} &=& \sum^{}_{\sigma\tau} \sum^{k_F^{\sigma\tau}}_{\bm{k}} \frac{\hbar^2 k^2}{2m_\tau} + \frac{1}{2} \sum^{}_{\bm{k}\sigma\tau} \sum^{}_{\bm{k'}\sigma'\tau'} \left[ \matrixel{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^D}{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'} \right.\\
           && \left. \negmedspace{} + \matrixel{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^{EX}}{\bm{k'}\sigma\tau,\bm{k}\sigma'\tau'} \right]\IEEEyesnumber
           \label{eqE}
 \end{IEEEeqnarray*}  
@@ -71,11 +116,10 @@ where the single-particle wave function is plane wave
 \begin{equation}
         \ket{\bm{k}\sigma\tau} = \frac{e^{i\bm{k}\cdot\bm{r}}}{ \sqrt{ \Omega}  } \chi_\sigma \chi_\tau
 \end{equation}
-$\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 \rho_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$, $v^{D(EX)}$ is the direct (exchange) part of the interaction determined from the singlet and triplet-even (and odd) of the central \gls{NN} force. Adopting the same functional form of \eqref{eq2-11}, the direct and exchange interaction is written as
+$\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 \rho_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$, $v^{D(EX)}$ is the direct (exchange) part of the interaction determined from the singlet and triplet-even (odd) of the central \gls{NN} force. Adopting the same functional form of \eqref{eq2-11}, the direct and exchange interaction is written as
 \begin{IEEEeqnarray*}{rCl}
-        v^{D(EX)}(\rho_b,r) &=& F^{D(EX)}_{00}(\rho_b) v^{D(EX)}_{00}(r) + F^{D(EX)}_{10}(\rho_b) v^{D(EX)}_{10}(r) \bm{\sigma}\cdot\bm{\sigma'}\\
-                          &&\negmedspace{}+ F^{D(EX)}_{01}(\rho_b) v^{D(EX)}_{01}(r) \bm{\tau}\cdot\bm{\tau'}\\
-                          &&\negmedspace{}+ F^{D(EX)}_{11}(\rho_b) v^{D(EX)}_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})\IEEEyesnumber
+        v^{D(EX)}(\rho_b,r) &=& F_{00}(\rho_b) v^{D(EX)}_{00}(r) + F_{10}(\rho_b) v^{D(EX)}_{10}(r) \bm{\sigma}\cdot\bm{\sigma'}\\
+                          &&\negmedspace{}+ F_{01}(\rho_b) v^{D(EX)}_{01}(r) \bm{\tau}\cdot\bm{\tau'} + F_{11}(\rho_b) v^{D(EX)}_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})\IEEEyesnumber
                           \label{eqHF}
 \end{IEEEeqnarray*}
 and
@@ -83,32 +127,6 @@ and
         v^{D(EX)}_{\sigma\tau}(r) &=& \sum^{3}_{k=1} Y^{D(EX)}_{\sigma\tau}(k) \frac{\exp(-\mu_k r)}{\mu_k r} \IEEEyesnumber
 \end{IEEEeqnarray*}  
 with the Yukawa strengths given in Table \ref{tab:yukawa} and the density-dependent form factor parameters are in Table \ref{tab:cd}. Note that in \eqref{eqHF}, $\rho_b$ denotes the \emph{baryon density}, this will be used in order to distinguish with the lepton density in the later section.
-
-\begin{table}[H]
-        \centering
-        \caption{CDM3Y$n$ interaction's parameters \cite{tan2020spin,than2010ufr}. The version CDM3Y3, 4, 6 don't have the 10 and 11 terms due to them being \emph{spin saturated}, i.e. the spin dependent terms vanishes effectively.}
-        \label{tab:cd}
-        \begin{tabular}{|C|C|C|C|C|C|}
-                \hline
-                \text{Interaction} & \sigma\tau & C_{\sigma\tau} & \alpha_{\sigma\tau} & \beta_{\sigma\tau} & \gamma_{\sigma\tau}\\
-                            & & & & (fm^3) & (fm^3)\\
-                \hline
-                \multirow{2}{*}{\text{CDM3Y3}} & 00 & 0.2985 & 3.4528 & 2.6388 & -1.5\\
-                                        & 01 & 0.1574 & 9.7016 & 16.2704 & 11.9946\\
-                \hline
-                \multirow{2}{*}{\text{CDM3Y4}} & 00 & 0.3052 & 3.2998 & 2.3180 & -2.0\\
-                                        & 01 & 0.1318 & 11.7739 & 16.0279 & 15.1987\\
-                \hline
-                \multirow{2}{*}{\text{CDM3Y6}} & 00 & 0.2658 & 3.8033 & 1.4099 & -4.0\\
-                                        & 01 & 0.1824 & 8.8819 & 16.4346 & 10.8703\\
-                \hline
-                \multirow{4}{*}{\text{CDM3Y8}} & 00 & 0.2658 & 3.8033 & 1.4099 & -4.3\\
-                                        & 01 & 0.2463 & 6.3836 & 10.2566 & 6.3549\\
-                                        & 10 & 0.2161 & 3.7510 & -3.3396 & 9.9329\\
-                                        & 11 & 0.7572 & 1.9967 & 33.2012 & 0.2989\\
-                \hline
-        \end{tabular}
-\end{table}
 
 \begin{table}[H]
         \centering
@@ -127,7 +145,7 @@ with the Yukawa strengths given in Table \ref{tab:yukawa} and the density-depend
 \end{table}
 Multiply \eqref{eqE} with $\Omega^{-1}$, the energy density of the \gls{NM} is separated into the kinetic term $\varepsilon_{kin}$ and the potential terms $\varepsilon_{\sigma\tau}$, i.e.
 \begin{equation}
-        \varepsilon = \frac{E}{\Omega} = \varepsilon_{kin} + F_{00}(\rho_b) \varepsilon_{00} + F_{01}(\rho_b) \varepsilon_{01} + F_{10}(\rho_b) \varepsilon_{10} + F_{11}(\rho_b) \varepsilon_{11}
+        \varepsilon_{HF} = \frac{E_{HF}}{\Omega} = \varepsilon_{kin} + F_{00}(\rho_b) \varepsilon_{00} + F_{01}(\rho_b) \varepsilon_{01} + F_{10}(\rho_b) \varepsilon_{10} + F_{11}(\rho_b) \varepsilon_{11}
 \end{equation}
 The final expressions of each terms of the energy density are
 \begin{IEEEeqnarray}{rCl}
@@ -137,13 +155,13 @@ The final expressions of each terms of the energy density are
         \varepsilon_{01} &=& \frac{1}{2} \left[ \rho_b^2 J^D_{01}\delta^2 + \int {A^2_{01} v^{EX}_{01}(r)} \: d^3 r \right] \\
         \varepsilon_{11} &=& \frac{1}{2} \left[ \rho_b^2 J^D_{11} \left( \Delta_n \frac{1+\delta}{2} - \Delta_p \frac{1-\delta}{2} \right)^2 + \int {A^2_{11} v^{EX}_{11}(r)} \: d^3 r \right]
 \end{IEEEeqnarray}  
-where $\Delta_{\tau} = (\rho_{\uparrow \tau} - \rho_{\downarrow \tau})/\rho_{\tau}$ is the polarity of nucleon, $\delta = (\rho_n - \rho_p)/\rho_b$ is the asymmetry of \gls{NM}, $J^D_{\sigma\tau} = \int v_{\sigma\tau}(r)\: d^3 r$ is the volume integral of the direct interaction and
+where $\Delta_{\tau} = (\rho_{\uparrow \tau} - \rho_{\downarrow \tau})/\rho_{\tau}$ is the polarity of nucleon, $\delta = (\rho_n - \rho_p)/\rho_b$ is the asymmetry of \gls{NM}, $J^D_{\sigma\tau} = \int v^D_{\sigma\tau}(r)\: d^3 r$ is the volume integral of the direct interaction and
 \begin{equation}
         \begin{array}{l}
-                A_{00} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n}) + \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n}) + \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p}) + \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p})\\[5pt]
-                A_{10} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n}) - \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n}) + \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p}) - \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p})\\[5pt]
-                A_{01} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n}) + \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n}) - \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p}) - \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p})\\[5pt]
-                A_{11} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n}) - \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n}) - \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p}) + \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p})
+                A_{00} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n} r) + \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n} r) + \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p} r) + \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p} r)\\[5pt]
+                A_{10} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n} r) - \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n} r) + \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p} r) - \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p} r)\\[5pt]
+                A_{01} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n} r) + \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n} r) - \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p} r) - \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p} r)\\[5pt]
+                A_{11} = \rho_{\uparrow n} \hat{j_1}(k_F^{\uparrow n} r) - \rho_{\downarrow n} \hat{j_1}(k_F^{\downarrow n} r) - \rho_{\uparrow p} \hat{j_1}(k_F^{\uparrow p} r) + \rho_{\downarrow p} \hat{j_1}(k_F^{\downarrow p} r)
         \end{array}
 \end{equation}
 with $\hat{j}_1(x)=3j_1(x)/x$ and $j_1(x)$ being the 1\textsuperscript{st} order spherical Bessel function.
@@ -151,7 +169,7 @@ with $\hat{j}_1(x)=3j_1(x)/x$ and $j_1(x)$ being the 1\textsuperscript{st} order
 \section{\textbeta-Stable Nuclear Matter}%
 \label{sec:textbeta_stable_nuclear_matter}
 
-After the \gls{HF} calculation, we were able to obtain a numerical \gls{HF} energy density $\varepsilon(\rho_n,\rho_p,\Delta_n,\Delta_p)$. However, it is in fact impossible for a \gls{NS} to exist while consisting of purely nucleon. In order for the \gls{NS} to exist, leptons ($e^-$ and $\mu^-$) have to be introduced to the matter constituents and the $npe\mu$ matter has to be under the condition of \emph{\textbeta-stable}, i.e.
+After the \gls{HF} calculation, we were able to obtain a numerical \gls{HF} energy density $\varepsilon(\rho_n,\rho_p,\Delta_n,\Delta_p)$. However, it is in fact impossible for a \gls{NS} to exist while consisting of purely nucleon. In order to compensate for this issue, leptons ($e^-$ and $\mu^-$) have to be introduced to the matter constituents and the $npe\mu$ matter has to satisfy the \emph{\textbeta-stable} condition, i.e.
 \begin{itemize}
         \item Charge balance
                 \begin{equation}
@@ -162,7 +180,7 @@ After the \gls{HF} calculation, we were able to obtain a numerical \gls{HF} ener
                 \begin{equation}
                         \mu_n - \mu_p = \mu_e = \mu_\mu
                 \end{equation}
-                where $\mu_i$ ($i=n,p,e,\mu$) is the chemical potential of the $i$ particle.
+                where $\mu_i = \pdv{\varepsilon}{\rho_i}$ ($i=n,p,e,\mu$) is the chemical potential of the $i$ particle.
 \end{itemize}
 The total energy density of the $npe\mu$ matter is thus
 \begin{equation}
@@ -176,7 +194,7 @@ Let $\hat{\mu} = \mu_n - \mu_p$ be the leptons' chemical potential, \eqref{charg
 \begin{equation}
         3\pi^2 (\hbar c)^3 \rho_p - \hat{\mu}^3 - \left[ \hat{\mu}^2 - (m_\mu c^2)^2 \right]^{3/2} \theta(\hat{\mu} - m_\mu c^2) = 0
 \end{equation}
-In the CDM3Y3, 4, 6 interactions, the \gls{NM} is spin saturated, therefore a $\Delta_n = \Delta_p = 0$ and there are no 10 and 11 terms, while for the interaction CDM3Y8, under strong magnetic field like that of a magnetar, we can approximate $\Delta_n \approx -\Delta_p \approx \Delta$ and reduce the \gls{EoS} to depend on just the baryon polarity $\Delta$ alone, and the more baryon polarized, the stronger the magnetic field of the \gls{NS}.\par
+Under strong magnetic field like that of a magnetar, we can approximate $\Delta_n \approx -\Delta_p \approx \Delta$ and reduce the \gls{EoS} to depend on just the baryon polarity $\Delta$ alone, and the more baryon polarized, the stronger the magnetic field of the \gls{NS}.\par
 For a fixed value of $\Delta$, we are able to obtain a density function of the form $\rho_n (\rho_b, \Delta)$ and $\rho_p (\rho_b, \Delta)$, which in turn gives the lepton chemical potential $\hat{\mu}(\rho_b,\Delta) = \hat{\mu}(\rho_n,\rho_p)$ On the other hand, the leptons' densities are then
 \begin{equation}
         \rho_e(\rho_b,\Delta) = \frac{ \hat{\mu}^3(\rho_b,\Delta)}{ 3\pi^2 (\hbar c)^3} \quad\text{and}\quad \rho_\mu(\rho_b,\Delta) = \frac{ \Big[\hat{\mu}^2(\rho_b,\Delta) - (m_\mu c^2)^2\Big]^{3/2}}{ 3\pi^2 (\hbar c)^3} \theta(\hat{\mu}(\rho_b,\Delta)-m_\mu c^2)
