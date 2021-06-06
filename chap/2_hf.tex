@@ -62,7 +62,7 @@ with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adj
 \begin{figure}[t]
         \centering
         \includegraphics[width=\textwidth]{fig/BHF_fit.eps}
-        \caption{Energy per baryon $E/A$ of symmetric \gls{NM} by the 5 CDM3Y$n$ models compared to \gls{BHF} result \cite{vidana2002equation}. The diamond and square represent the \gls{BHF} result for $\Delta_n=-\Delta_p=\pm 1$ and $\Delta_n=\Delta_p=\pm 1$ respectively, as well as the dashed and solid lines for the CDM3Y$n$ fit.}
+        \caption{Energy per baryon $E/A$ of symmetric \gls{NM} by the 5 CDM3Y$n$ models compared to \gls{BHF} result \cite{vidana2002equation}. The diamond and square represent the \gls{BHF} result for $\Delta_n=-\Delta_p=\pm 1$ and $\Delta_n=\Delta_p=\pm 1$ respectively with $\Delta_\tau$ being the baryon spin polarity.}
         \label{fig:bhf}
 \end{figure} 
 
@@ -108,8 +108,8 @@ with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adj
 
 In \gls{HF} formalism, the total \gls{HF} energy of the system can be expressed as
 \begin{IEEEeqnarray*}{rCl}
-        E_{HF} &=& \sum^{}_{\sigma\tau} \sum^{k_F^{\sigma\tau}}_{\bm{k}} \frac{\hbar^2 k^2}{2m_\tau} + \frac{1}{2} \sum^{}_{\bm{k}\sigma\tau} \sum^{}_{\bm{k'}\sigma'\tau'} \left[ \matrixel{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^D}{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'} \right.\\
-          && \left. \negmedspace{} + \matrixel{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^{EX}}{\bm{k'}\sigma\tau,\bm{k}\sigma'\tau'} \right]\IEEEyesnumber
+        E_{HF} &=& \sum^{}_{\sigma\tau} \sum^{k_F^{\sigma\tau}}_{\bm{k}} \frac{\hbar^2 k^2}{2m_\tau} + \frac{1}{2} \sum^{}_{\bm{k}\sigma\tau} \sum^{}_{\bm{k'}\sigma'\tau'} \left[ \mel**{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^D}{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'} \right.\\
+          && \left. \negmedspace{} + \mel**{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^{EX}}{\bm{k'}\sigma\tau,\bm{k}\sigma'\tau'} \right]\IEEEyesnumber
           \label{eqE}
 \end{IEEEeqnarray*}  
 where the single-particle wave function is plane wave
@@ -194,7 +194,7 @@ Let $\hat{\mu} = \mu_n - \mu_p$ be the leptons' chemical potential, \eqref{charg
 \begin{equation}
         3\pi^2 (\hbar c)^3 \rho_p - \hat{\mu}^3 - \left[ \hat{\mu}^2 - (m_\mu c^2)^2 \right]^{3/2} \theta(\hat{\mu} - m_\mu c^2) = 0
 \end{equation}
-Under strong magnetic field like that of a magnetar, we can approximate $\Delta_n \approx -\Delta_p \approx \Delta$ and reduce the \gls{EoS} to depend on just the baryon polarity $\Delta$ alone, and the more baryon polarized, the stronger the magnetic field of the \gls{NS}.\par
+from which the proton fraction $x_p = \rho_p/\rho_b$ can be obtained as shown in Figure \ref{fig:xp}. Furthermore, under strong magnetic field like that of a magnetar, we can approximate $\Delta_n \approx -\Delta_p \approx \Delta$ and reduce the \gls{EoS} to depend on just the baryon polarity $\Delta$ alone, and the more baryon polarized, the stronger the magnetic field of the \gls{NS}.\par
 For a fixed value of $\Delta$, we are able to obtain a density function of the form $\rho_n (\rho_b, \Delta)$ and $\rho_p (\rho_b, \Delta)$, which in turn gives the lepton chemical potential $\hat{\mu}(\rho_b,\Delta) = \hat{\mu}(\rho_n,\rho_p)$ On the other hand, the leptons' densities are then
 \begin{equation}
         \rho_e(\rho_b,\Delta) = \frac{ \hat{\mu}^3(\rho_b,\Delta)}{ 3\pi^2 (\hbar c)^3} \quad\text{and}\quad \rho_\mu(\rho_b,\Delta) = \frac{ \Big[\hat{\mu}^2(\rho_b,\Delta) - (m_\mu c^2)^2\Big]^{3/2}}{ 3\pi^2 (\hbar c)^3} \theta(\hat{\mu}(\rho_b,\Delta)-m_\mu c^2)
@@ -219,4 +219,4 @@ and the total pressure of \gls{NS} matter
 \begin{equation}
         P(\rho_b,\Delta) = P_b(\rho_b,\Delta) + P_e(\rho_b,\Delta) + P_\mu(\rho_b,\Delta)
 \end{equation}
-and this is the final result of the \gls{EoS} of cold $\beta$-stable \gls{NS} matter.
+and this completes the \gls{EoS} of cold $\beta$-stable \gls{NS} matter (Figure \ref{fig:e} and \ref{fig:p}).

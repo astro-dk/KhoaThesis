@@ -29,8 +29,6 @@
 \renewcommand{\footrulewidth}{1pt}
 \addtolength{\footskip}{0.5cm}
 \setlength{\headheight}{15pt}
-\newcommand{\la}{\left\langle}
-\newcommand{\ra}{\right\rangle}
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
 \theoremstyle{plain}\newtheorem{ques}{Question}
 \theoremstyle{definition}\newtheorem*{ans}{Answer}
@@ -118,11 +116,13 @@
         \label{chap:ns_prop}
         \input{chap/3_tov.tex}
 
-        \chapter{Discussions}
-        \label{chap:discuss}
+        \chapter{Results and Discussions}
+        \label{chap:result}
+        \input{chap/4_result.tex}
         
         \chapter{Conclusions}
         \label{chap:conclusion}
+        \input{chap/5_conclusion.tex}
 
         \clearpage
         \bibliographystyle{unsrt}

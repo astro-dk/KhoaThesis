@@ -1,11 +1,11 @@
 \section{Tolman-Oppenheimer-Volkoff Equation}%
 \label{sec:tolman_oppenheimer_volkoff_equation}
 
-In the framework of \gls{GR}, assume the \gls{NS} to be in a static, isotropic region of spacetime, the metric elements are then
+Suppose the \gls{NS} to be static and spherically symmetric, the metric elements are then \cite{glendenning2012compact}
 \begin{equation}
-        c^2 d\tau^2 = g_{\mu\nu} dx^\mu dx^\nu = e^{2\nu(r)}c^2 dt^2 - e^{2\lambda(r)} dr^2 - r^2 d\theta^2 - r^2\sin^2\theta d\phi^2
+        \dd s^2 = g_{\mu\nu} \dd x^\mu \dd x^\nu = e^{2\nu(r)}c^2 \dd t^2 - e^{2\lambda(r)} \dd r^2 - r^2 \dd \theta^2 - r^2\sin^2\theta \dd \phi^2
 \end{equation}
-Inside the \gls{NS}, we have \cite{glendenning2012compact} the energy-momentum tensor as
+Consider the \gls{NS} matter to be perfect fluid, we have the energy-momentum tensor as
 \begin{equation}
         T^{\mu\nu} = - Pg^{\mu\nu} + (P + \varepsilon) u^\mu u^\nu
 \end{equation}
@@ -15,16 +15,34 @@ where $u^\mu = dx^\mu/d\tau$ is the local fluid 4-velocity. Solving the Einstein
 \end{equation}
 gives the Tolman-Oppenheimer-Volkoff (\gls{TOV}) equation
 \begin{IEEEeqnarray}{rCl}
-        \frac{dP}{dr} &=& - \frac{G\varepsilon(P)m}{c^2 r^2} \left( 1+ \frac{P}{\varepsilon(P)} \right) \left( 1+ \frac{4\pi P r^3}{m c^2}  \right) \left( 1- \frac{2Gm}{c^2 r}  \right)^{-1}\\
-        \frac{dm}{dr} &=& \frac{4\pi r^2\varepsilon(P)}{c^2}
+        \dv{P}{r} &=& - \frac{G\varepsilon(P)m}{c^2 r^2} \left( 1+ \frac{P}{\varepsilon(P)} \right) \left( 1+ \frac{4\pi P r^3}{m c^2}  \right) \left( 1- \frac{2Gm}{c^2 r}  \right)^{-1}\\
+        \dv{m}{r} &=& \frac{4\pi r^2\varepsilon(P)}{c^2}
 \end{IEEEeqnarray}  
-where $\varepsilon(P)$ can be obtained from the CDM3Y$n$ interaction calculated previously. Additional boundary conditions are
+where $\varepsilon(P)$ is the \gls{EoS} obtained from the CDM3Y$n$ interaction calculated previously. Additional boundary conditions are
 \begin{equation*}
         P(0)=P_c;\qquad P(R)=0;\qquad m(0)=0;\qquad m(R)=M
 \end{equation*}
-and by varying the center pressure $P_c$, a relation of the mass $M$ and radius $R$ of the \gls{NS} can be obtained.
+and by varying the center pressure $P_c$, a relation of the gravitational mass $M$ and radius $R$ of the \gls{NS} can be obtained.
 
 \section{Gravito-electric and Gravito-magnetic Tidal Deformation}%
 \label{sec:gravito_electric_and_gravito_magnetic_tidal_deformation}
 
-Pertubing
+In close orbit with another compact companion in a binary system, the \gls{NS} is tidally deformed by strong gravitational interaction. Analogous to the classical theory of electromagnetism, the tidal field experienced by it can be decomposed into 2 types: the \emph{gravito-electric} and \emph{gravito-magnetic} components with respective \emph{relativistic tidal moment} \cite{damour2009relativistic}
+\begin{equation}
+        \mathcal{E}_L = \partial_{L-1} E_{a_l} \qquad\text{and}\qquad \mathcal{M}_L = c^2 \partial_{L-1} B_{a_l}
+\end{equation}
+where $E_{a_l}$ and $B_{a_l}$ are the $a_l$ component of the externally generated local \gls{GE} and \gls{GM} field, $L$ represents the multi-index $(a_1, a_2,\ldots, a_l)$ and $l$ being the order of the moment. As a result, the deformation of \gls{NS} is parameterized by the \gls{GE} and \gls{GM} \emph{tidal deformabilities} $\lambda_l$ and $\sigma_l$, i.e. in leading order \cite{damour2009relativistic}
+\begin{IEEEeqnarray}{rCl}
+        \mathcal{Q}_L &=& \lambda_l \mathcal{E}_L,\\
+        \mathcal{S}_L &=& \sigma_l \mathcal{M}_L
+\end{IEEEeqnarray}
+with $\mathcal{Q}_L$ being the induced mass multipole moment, representing how the mass distribution is no longer spherically symmetric, while $\mathcal{S}_L$ is the current multipole moment in adiabatic approximation \cite{damour2009relativistic,perot2021role}. From the deformabilities, the dimensionless \gls{GE} and \gls{GM} \emph{tidal Love numbers} are defined as \cite{perot2021role}
+\begin{equation}
+        k_l = \frac{1}{2} (2l-1)!! \frac{G\lambda_l}{R^{2l+1}} \quad \text{and}\quad j_l = 4(2l-1)!! \frac{G\sigma_l}{R^{2l+1}} 
+\end{equation}
+These parameters are related to the \gls{GE} and \gls{GM} \emph{tidal deformability coefficients} as
+\begin{IEEEeqnarray}{rCl}
+        \Lambda_l &=& \frac{2}{(2l-1)!!} k_l \left( \frac{c^2 R}{GM} \right)^{2l+1}\\
+        \Sigma_l &=& \frac{1}{4(2l-1)!!} j_l \left( \frac{c^2 R}{GM} \right)^{2l+1}
+\end{IEEEeqnarray}
+which can be extracted from the signal of \gls{GW}.
