@@ -1,13 +1,13 @@
 \section{Nucleon-Nucleon Interaction}%
 \label{sec:nucleon_nucleon_interaction}
 
-Due to the lack of a exact theory to describe the nucleon-nucleon (\gls{NN}) interaction, a model need to be imposed and fit with experimental measurement or theoretical calculation results. Plus, for a system as massive as a \gls{NS}, deducing the \gls{EoS} using the \emph{ab initio} method, i.e. solving the Schr\"{o}dinger equation over all particles, is simply impossible, therefore an \emph{effective interaction} must be used \cite{greiner1996nuclear}. In this section, we only limit ourselves to two-body interaction, thus, the \gls{NN} potential can be expressed in the form of
+Due to the lack of a exact theory to describe the nucleon-nucleon (\gls{NN}) interaction, a model need to be imposed and fit with experimental measurement or theoretical calculation results. Plus, for a system as massive as a \gls{NS}, deducing the \gls{EoS} using the \emph{ab initio} method, i.e. solving the Schr\"{o}dinger equation over all particles, is simply impossible, therefore an \emph{effective interaction} must be used \citep{greiner1996nuclear}. In this section, we only limit ourselves to two-body interaction, thus, the \gls{NN} potential can be expressed in the form of
 \begin{equation}
         v = v(\bm{r}, \bm{r'}, \bm{p}, \bm{p'}, \bm{\sigma}, \bm{\sigma'}, \bm{\tau}, \bm{\tau'})
         \label{eff_interaction}
 \end{equation}
 where the primed and unprimed variables indicate the properties of 2 nucleons respectively, in which $\bm{r}$ is the particle's position, $\bm{p}$ is its momentum, $\bm{\sigma}$ is its intrinsic spin and $\bm{\tau}$ is its isospin.\par
-The functional form of $v$ in \eqref{eff_interaction} cannot freely take any form but is constrained by many invariance requirements \cite{greiner1996nuclear}
+The functional form of $v$ in \eqref{eff_interaction} cannot freely take any form but is constrained by many invariance requirements \citep{greiner1996nuclear}
 \begin{itemize}
         \item \textbf{Translational invariance:} The \gls{NN} potential should only depend on the \emph{relative position} of the two particle but not their explicit positions, thus we can reduce \eqref{eff_interaction} to
                 \begin{equation}
@@ -39,7 +39,7 @@ The functional form of $v$ in \eqref{eff_interaction} cannot freely take any for
                         v(\bm{r},\bm{p},\bm{\sigma},\bm{\sigma'},\bm{\tau},\bm{\tau'}) = v(\bm{r},-\bm{p},-\bm{\sigma},-\bm{\sigma'},\bm{\tau},\bm{\tau'})
                 \end{equation}
 \end{itemize}
-Having the above considerations, developing further the M3Y-Paris interaction, which was used by the \gls{HF} study of \gls{NM} \cite{loan2011equation, tan2016mean, tan2020spin,tan2021equation} and the folding model study of \gls{NN} scattering \cite{khoa1997nuclear,khoa2000generalized},
+Having the above considerations, developing further the M3Y-Paris interaction, which was used by the \gls{HF} study of \gls{NM} \citep{loan2011equation, tan2016mean, tan2020spin,tan2021equation} and the folding model study of \gls{NN} scattering \citep{khoa1997nuclear,khoa2000generalized},
 \begin{equation}
         v = v_{00}(r) + v_{10}(r) \bm{\sigma}\cdot\bm{\sigma'} + v_{01}(r) \bm{\tau}\cdot\bm{\tau'} + v_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})
 \end{equation}
@@ -53,22 +53,22 @@ where each radial term is the superposition of 3 Yukawa potentials
 \begin{equation}
         v_{\sigma\tau}(r) = \sum^{3}_{k=1} Y_{\sigma\tau}(k) \frac{\exp(-\mu_k r)}{\mu_k r} 
 \end{equation}
-and the form factor $F_{\sigma\tau}(\rho)$ shared the functional form \cite{khoa1997nuclear,tan2020spin,tan2021equation,than2010ufr}
+and the form factor $F_{\sigma\tau}(\rho)$ shared the functional form \citep{khoa1997nuclear,tan2020spin,tan2021equation,than2010ufr}
 \begin{equation}
         F_{\sigma\tau}(\rho) = C_{\sigma\tau} [1 + \alpha_{\sigma\tau} \exp(-\beta_{\sigma\tau}\rho) + \gamma_{\sigma\tau}\rho]
 \end{equation}
-with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adjusted to give the corresponding incompressibility $K$ of symmetric \gls{NM} at saturation density $\rho_0$ and the binding energy $E_0 \approx 15.8\; MeV$, while the 10 term is modified from \cite{than2010ufr} to reproduce $E_{sym}(\rho_0) \approx 30\;MeV$, $L\approx 50\;MeV$ and to be in agreement with the ab-initio results \cite{akmal1998equation,gandolfi2010microscopic} at higher density \cite{tan2021equation}. On the other hand, the spin-dependent terms, 10 and 11, are hereby included in the 5 models by fine tuning the parameters to yield the same result as the Brueckner-Hartree-Fock (\gls{BHF}) study of spin polarized \gls{NM} \cite{vidana2002equation} as in Figure \ref{fig:bhf}.
+with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adjusted to give the corresponding incompressibility $K$ of symmetric \gls{NM} at saturation density $\rho_0$ and the binding energy $E_0 \approx 15.8\; MeV$, while the 10 term is modified from \citep{than2010ufr} to reproduce $E_{sym}(\rho_0) \approx 30\;MeV$, $L\approx 50\;MeV$ and to be in agreement with the ab-initio results \citep{akmal1998equation,gandolfi2010microscopic} at higher density \citep{tan2021equation}. On the other hand, the spin-dependent terms, 10 and 11, are hereby included in the 5 models by fine tuning the parameters to yield the same result as the Brueckner-Hartree-Fock (\gls{BHF}) study of spin polarized \gls{NM} \citep{vidana2002equation} as in Figure \ref{fig:bhf}.
 
 \begin{figure}[t]
         \centering
         \includegraphics[width=\textwidth]{fig/BHF_fit.eps}
-        \caption{Energy per baryon $E/A$ of symmetric \gls{NM} by the 5 CDM3Y$n$ models compared to \gls{BHF} result \cite{vidana2002equation}. The diamond and square represent the \gls{BHF} result for $\Delta_n=-\Delta_p=\pm 1$ and $\Delta_n=\Delta_p=\pm 1$ respectively with $\Delta_\tau$ being the baryon spin polarity.}
+        \caption{Energy per baryon $E/A$ of symmetric \gls{NM} by the 5 CDM3Y$n$ models compared to \gls{BHF} result \citep{vidana2002equation}. The diamond and square represent the \gls{BHF} result for $\Delta_n=-\Delta_p=\pm 1$ and $\Delta_n=\Delta_p=\pm 1$ respectively with $\Delta_\tau$ being the baryon spin polarity.}
         \label{fig:bhf}
 \end{figure} 
 
 \begin{table}[H]
         \centering
-        \caption{CDM3Y$n$ interaction's parameters \cite{tan2021equation}.}
+        \caption{CDM3Y$n$ interaction's parameters; the 00 and 01 terms are inherited from \citep{tan2021equation}, while the 10 and 11 parameters are added by fitting with \gls{BHF} result.}
         \label{tab:cd}
         \begin{tabular}{|C|C|C|C|C|C|C|}
                 \hline
@@ -130,7 +130,7 @@ with the Yukawa strengths given in Table \ref{tab:yukawa} and the density-depend
 
 \begin{table}[H]
         \centering
-        \caption{Yukawa strengths of the M3Y-Paris interaction \cite{tan2020spin,anantaraman1983effective}.}
+        \caption{Yukawa strengths of the M3Y-Paris interaction \citep{tan2020spin,anantaraman1983effective}.}
         \label{tab:yukawa}
         \begin{tabular}{|C|C|C|C|C|C|C|C|C|C|}
                 \hline
@@ -169,7 +169,7 @@ with $\hat{j}_1(x)=3j_1(x)/x$ and $j_1(x)$ being the 1\textsuperscript{st} order
 \section{\textbeta-Stable Nuclear Matter}%
 \label{sec:textbeta_stable_nuclear_matter}
 
-After the \gls{HF} calculation, we were able to obtain a numerical \gls{HF} energy density $\varepsilon(\rho_n,\rho_p,\Delta_n,\Delta_p)$. However, it is in fact impossible for a \gls{NS} to exist while consisting of purely nucleon. In order to compensate for this issue, leptons ($e^-$ and $\mu^-$) have to be introduced to the matter constituents and the $npe\mu$ matter has to satisfy the \emph{\textbeta-stable} condition, i.e.
+After the \gls{HF} calculation, we were able to obtain a numerical \gls{HF} energy density $\varepsilon(\rho_n,\rho_p,\Delta_n,\Delta_p)$. However, it is in fact impossible for a \gls{NS} to exist while consisting of purely nucleon. In order to compensate for this issue, leptons ($e^-$ and $\mu^-$) have to be introduced to the matter constituents and the $npe\mu$ matter has to satisfy the \emph{\textbeta-stable} condition \citep{glendenning2012compact}, i.e.
 \begin{itemize}
         \item Charge balance
                 \begin{equation}
@@ -195,11 +195,11 @@ Let $\hat{\mu} = \mu_n - \mu_p$ be the leptons' chemical potential, \eqref{charg
         3\pi^2 (\hbar c)^3 \rho_p - \hat{\mu}^3 - \left[ \hat{\mu}^2 - (m_\mu c^2)^2 \right]^{3/2} \theta(\hat{\mu} - m_\mu c^2) = 0
 \end{equation}
 from which the proton fraction $x_p = \rho_p/\rho_b$ can be obtained as shown in Figure \ref{fig:xp}. Furthermore, under strong magnetic field like that of a magnetar, we can approximate $\Delta_n \approx -\Delta_p \approx \Delta$ and reduce the \gls{EoS} to depend on just the baryon polarity $\Delta$ alone, and the more baryon polarized, the stronger the magnetic field of the \gls{NS}.\par
-For a fixed value of $\Delta$, we are able to obtain a density function of the form $\rho_n (\rho_b, \Delta)$ and $\rho_p (\rho_b, \Delta)$, which in turn gives the lepton chemical potential $\hat{\mu}(\rho_b,\Delta) = \hat{\mu}(\rho_n,\rho_p)$ On the other hand, the leptons' densities are then
+For a fixed value of $\Delta$, we are able to obtain a density function of the form $\rho_n (\rho_b, \Delta)$ and $\rho_p (\rho_b, \Delta)$, which in turn gives the lepton chemical potential $\hat{\mu}(\rho_b,\Delta) = \hat{\mu}(\rho_n,\rho_p)$ On the other hand, the leptons' densities are then \cite{loan2011equation}
 \begin{equation}
         \rho_e(\rho_b,\Delta) = \frac{ \hat{\mu}^3(\rho_b,\Delta)}{ 3\pi^2 (\hbar c)^3} \quad\text{and}\quad \rho_\mu(\rho_b,\Delta) = \frac{ \Big[\hat{\mu}^2(\rho_b,\Delta) - (m_\mu c^2)^2\Big]^{3/2}}{ 3\pi^2 (\hbar c)^3} \theta(\hat{\mu}(\rho_b,\Delta)-m_\mu c^2)
 \end{equation} 
-Consider the $e^-$ and $\mu^-$ to be systems of relativistic Fermi gas, then their respective energy densities and pressure contributions are ($l=e,\mu$)
+Consider the $e^-$ and $\mu^-$ to be systems of relativistic Fermi gas, then their respective energy densities and pressure contributions are ($l=e,\mu$) \citep{moustakidis2009equation}
 \begin{equation}
         \varepsilon_l(\rho_b,\Delta) = \frac{ 2}{ (2\pi)^3} \int_{{0}}^{{[3\pi^2\rho_l(\rho_b,\Delta)]^{1/3}}} {\sqrt{\hbar^2 c^2 k^2 + m_l^2 c^4}} \: d^3{\mathbf{k}}
 \end{equation} 

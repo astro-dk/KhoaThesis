@@ -1,17 +1,18 @@
 \documentclass[a4paper,12pt]{report}
 \usepackage{amsmath,amssymb,amsthm,IEEEtrantools,hyperref,esint,multicol}
 \usepackage{tikz,pgf,fancyhdr,pgfplots,lmodern,transparent}
-\usepackage{float, graphicx, physics, titling, cite, bm}
-\usepackage{array,multirow,alphabeta}
+\usepackage{float, graphicx, physics, titling, bm}
+\usepackage{array,multirow,alphabeta, natbib}
 \usepackage[justification=centering, font=small]{caption}
 \usepackage[export]{adjustbox}
 \usepackage[nopostdot, nonumberlist, toc, automake]{glossaries}
 \usepackage[nottoc]{tocbibind}
-\usepackage[includeheadfoot, left=1.2cm, right=1.2cm, bottom=3cm, top=3cm]{geometry}
+\usepackage[includeheadfoot, left=1.2cm, right=1.2cm, bottom=2.6cm, top=2.6cm]{geometry}
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=black,
+    citecolor=blue,
     filecolor=green,      
     urlcolor=violet,
 }
@@ -125,6 +126,6 @@
         \input{chap/5_conclusion.tex}
 
         \clearpage
-        \bibliographystyle{unsrt}
+        \bibliographystyle{apalike}
         \bibliography{ref}
 \end{document}
