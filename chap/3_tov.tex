@@ -15,7 +15,7 @@ where $u^\mu = dx^\mu/d\tau$ is the local fluid 4-velocity. Solving the Einstein
 \end{equation}
 gives the Tolman-Oppenheimer-Volkoff (\gls{TOV}) equation
 \begin{IEEEeqnarray}{rCl}
-        \dv{P}{r} &=& - \frac{G\varepsilon(P)m}{c^2 r^2} \left( 1+ \frac{P}{\varepsilon(P)} \right) \left( 1+ \frac{4\pi P r^3}{m c^2}  \right) \left( 1- \frac{2Gm}{c^2 r}  \right)^{-1}\\
+        \dv{P}{r} &=& - \frac{G\varepsilon(P)m}{c^2 r^2} \left( 1+ \frac{P}{\varepsilon(P)} \right) \left( 1+ \frac{4\pi P r^3}{m c^2}  \right) \left( 1- \frac{2Gm}{c^2 r}  \right)^{-1}\label{tov}\\
         \dv{m}{r} &=& \frac{4\pi r^2\varepsilon(P)}{c^2}
 \end{IEEEeqnarray}  
 where $\varepsilon(P)$ is the \gls{EoS} obtained from the CDM3Y$n$ interaction calculated previously. Additional boundary conditions are
@@ -36,13 +36,49 @@ where $E_{a_l}$ and $B_{a_l}$ are the $a_l$ component of the externally generate
         \mathcal{Q}_L &=& \lambda_l \mathcal{E}_L,\\
         \mathcal{S}_L &=& \sigma_l \mathcal{M}_L
 \end{IEEEeqnarray}
-with $\mathcal{Q}_L$ being the induced mass multipole moment, representing how the mass distribution is no longer spherically symmetric, while $\mathcal{S}_L$ is the current multipole moment in adiabatic approximation \cite{damour2009relativistic,perot2021role}. From the deformabilities, the dimensionless \gls{GE} and \gls{GM} \emph{tidal Love numbers} are defined as \cite{perot2021role}
+with $\mathcal{Q}_L$ being the induced mass multipole moment, i.e. the deviation of the mass distribution from spherically symmetry at order $l$, while $\mathcal{S}_L$ is the current multipole moment in adiabatic approximation \cite{damour2009relativistic,perot2021role}. From the deformabilities, the dimensionless \gls{GE} and \gls{GM} \emph{tidal Love numbers} are defined as \cite{perot2021role}
 \begin{equation}
         k_l = \frac{1}{2} (2l-1)!! \frac{G\lambda_l}{R^{2l+1}} \quad \text{and}\quad j_l = 4(2l-1)!! \frac{G\sigma_l}{R^{2l+1}} 
 \end{equation}
-These parameters are related to the \gls{GE} and \gls{GM} \emph{tidal deformability coefficients} as
+These parameters are related to the \gls{GE} and \gls{GM} \emph{tidal deformability parameters} as
 \begin{IEEEeqnarray}{rCl}
         \Lambda_l &=& \frac{2}{(2l-1)!!} k_l \left( \frac{c^2 R}{GM} \right)^{2l+1}\\
         \Sigma_l &=& \frac{1}{4(2l-1)!!} j_l \left( \frac{c^2 R}{GM} \right)^{2l+1}
 \end{IEEEeqnarray}
-which can be extracted from the signal of \gls{GW}.
+which can be potentially extracted from the signal of \gls{GW}. In order to properly calculate these parameters, let $H_l(r)$ and $\tilde{H}_l(r)$ be small perturbations of the static metric. These functions have to satisfy \cite{perot2021role}
+\begin{IEEEeqnarray*}{rCl}
+        H''_l(r) &+& H'_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r}  \right]^{-1} \left\{ \frac{2}{r} - \frac{2Gm(r)}{c^2 r^2} - \frac{4\pi G}{c^4} r[\varepsilon(r) - P(r)] \right\}\\
+                 &+& H_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \Bigg\{ \frac{4\pi G}{c^4} \left[ 5\varepsilon(r) + 9P(r) + c^2 \dv{\varepsilon}{P}\left[ \varepsilon(r) + P(r) \right] \right] \\
+                 &-& \frac{l(l+1)}{r^2} - 4 \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \left[ \frac{Gm(r)}{c^2 r^2} + \frac{4\pi G}{c^4} rP(r) \right]^2 \Bigg\} = 0\IEEEyesnumber
+\end{IEEEeqnarray*}
+for \gls{GE} perturbations and
+\begin{IEEEeqnarray*}{rCl}
+        \tilde{H}''_l(r) &-& \tilde{H}'_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \frac{4\pi G}{c^4} r \left[ P(r) + \varepsilon(r) \right]\\
+                         &-& \tilde{H}_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \left\{ \frac{l(l+1)}{r^2} - \frac{4Gm(r)}{c^2 r^3} + \theta \frac{8\pi G}{c^4} \left[ P(r) + \varepsilon(r) \right] \right\} = 0\IEEEyesnumber
+\end{IEEEeqnarray*}
+for \gls{GM} perturbations; the value of $\theta=1$ is for static fluid while irrotational fluid adopts the value $\theta=-1$. These two equations are integrated along with the \gls{TOV} equation \eqref{tov}. In addition, we have the compactness parameters $C = GM/(Rc^2)$ and define
+\begin{equation}
+        y_l = \frac{RH'_l(R)}{H_l(R)} \quad\text{and}\quad \tilde{y}_l = \frac{R\tilde{H}'_l(R)}{\tilde{H}_l(R)}.
+\end{equation}
+The explicit expressions of the first few orders of the \gls{GE} and \gls{GM} Love numbers are
+\begin{IEEEeqnarray*}{rCl}
+        k_2 &=& \frac{8}{5} C^5 (1-2C)^2 \left[ 2(y_2 -1)C - y_2 + 2 \right] \left\{ 2C \left[ 4(y_2 +1)C^4 + 2(3y_2 -2)C^3\right.\right.\\
+            && \negmedspace{}\left. -2(11y_2 -13)C^2 + 3(5y_2 -8)C - 3(y_2 -2) \right]\\
+            && \negmedspace{}\left. +3(1-2C)^2 \left[ 2(y_2 -1)C - y_2 +2 \right]\log (1-2C) \right\}^{-1},\IEEEyesnumber\\
+        k_3 &=& \frac{8}{7} C^7 (1-2C)^2 \left[ 2(y_3 - 1)C^2 - 3(y_3 -2)C + y_3 -3 \right]\\
+            &&\negmedspace{} \times \left\{ 2C \big[ 4(y_3 +1)C^5 + 2(9y_3 -2)C^4 - 20(7y_3 -9)C^3 + 5(37y_3 -72)C^2 - 45(2y_3 -5)C\right.\\
+            &&\negmedspace{} \left.+ 15(y_3 -3) \big] + 15(1-2C)^2 \left[ 2(y_3 -1)C^2 - 3(y_3 -2)C + y_3 - 3 \right]\log (1-2C)\right\}^{-1},\IEEEyesnumber\\
+        k_4 &=& \frac{32}{147} C^9 (1-2C)^2 \left[ 12(y_4 -1)C^3 - 34(y_4 -2)C^2 + 28(y_4 -3)C -7(y_4 -4) \right]\\
+            &&\negmedspace{} \times \left\{ 2C \left[ 8(y_4 +1)C^6 + 4(17y_4 -2)C^5 - 12(83y_4 -107)C^4 + 40(55y_4 -116)C^3 \right.\right.\\
+            &&\negmedspace{} \left.\left. - 10(191y_4 -536)C^2 + 105(7y_4 -24)C - 105(y_4 -4)\right] + 15(1-2C)^2 \left[ 12(y_4 -1)C^3\right.\right.\\
+            &&\negmedspace{} \left.\left. -34(y_4 -2)C^2 + 28(y_4 -3)C - 7(y_4 -4)\right]\log (1-2C)\right\}^{-1},\IEEEyesnumber\\
+        j_2 &=& \frac{24}{5} C^5 \left[ 2(\tilde{y}_2 -2)C - \tilde{y}_2 +3 \right] \big\{ 2C \left[ 2(\tilde{y}_2 +1)C^3 + 2\tilde{y}_2 C^2 + 3(\tilde{y}_2 -1)C - 3(\tilde{y}_2 -3) \right]\\
+            &&\negmedspace{} +3 \left[ 2(\tilde{y}_2 -2)C - \tilde{y}_2 +3 \right]\log (1-2C)\big\}^{-1},\IEEEyesnumber\\
+        j_3 &=& \frac{64}{21} C^7 \left[ 8(\tilde{y}_3 -2)C^2 - 10(\tilde{y}_3 -3)C + 3(\tilde{y}_3 -4) \right]\\
+            &&\negmedspace{} \times \left\{ 2C \left[ 4(\tilde{y}_3 +1)C^4 + 10\tilde{y}_3 C^3 + 30(\tilde{y}_3-1)C^2 - 15(7\tilde{y}_3 -18)C + 45(\tilde{y}_3 -4) \right]\right.\\
+            &&\negmedspace{} \left. + 15 \left[ 8(\tilde{y}_3 -2)C^2 - 10(\tilde{y}_3 -3)C + 3(\tilde{y}_3 -4) \right]\log(1-2C) \right\}^{-1},\IEEEyesnumber\\
+        j_4 &=& \frac{80}{147} C^9 \left[ 40(\tilde{y}_4 -2)C^3 - 90(\tilde{y}_4 -3)C^2 + 63(\tilde{y}_4 -4)C - 14(\tilde{y}_4 -5) \right]\\
+            &&\negmedspace{} \times \left\{ 2C \big[ 4(\tilde{y}_4 +1)C^5 + 18\tilde{y}_4 C^4 + 90(\tilde{y}_4 -1)C^3 - 5(137\tilde{y}_4 -334)C^2\right.\\
+            &&\negmedspace{} \left. + 105(7\tilde{y}_4 -26)C - 210(\tilde{y}_4 -5)\big] + 15 \big[ 40(\tilde{y}_4 -2)C^3 - 90(\tilde{y}_4 -3)C^2\right.\\
+            &&\negmedspace{} \left. + 63(\tilde{y}_4 -4)C - 14(\tilde{y}_4 -5) \big]\log(1-2C)\right\}^{-1}
+\end{IEEEeqnarray*}
