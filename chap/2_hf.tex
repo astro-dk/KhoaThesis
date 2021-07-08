@@ -11,7 +11,7 @@ The functional form of $v$ in \eqref{eff_interaction} cannot freely take any for
 \begin{equation}
         v = v_{00}(r) + v_{10}(r) \bm{\sigma}\cdot\bm{\sigma'} + v_{01}(r) \bm{\tau}\cdot\bm{\tau'} + v_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})
 \end{equation}
-by adding a density-dependent form factor $F_{\sigma\tau}(n)$ to each term gives the CDM3Y$n$ interaction model
+by adding a density-dependent form factor $F_{\sigma\tau}(n)$ to each term gives the CDM3Y$n$ and BDM3Y1 interaction model
 \begin{IEEEeqnarray*}{rCl}
         v(n,r) &=& F_{00}(n) v_{00}(r) + F_{10}(n) v_{10}(r) \bm{\sigma}\cdot\bm{\sigma'}\\
           &&\negmedspace{}+ F_{01}(n) v_{01}(r) \bm{\tau}\cdot\bm{\tau'} + F_{11}(n) v_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})\IEEEyesnumber
@@ -25,18 +25,18 @@ and the form factor $F_{\sigma\tau}(n)$ shared the functional form \citep{khoa19
 \begin{equation}
         F_{\sigma\tau}(n) = C_{\sigma\tau} [1 + \alpha_{\sigma\tau} \exp(-\beta_{\sigma\tau}n) + \gamma_{\sigma\tau}n]
 \end{equation}
-with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adjusted to give the corresponding incompressibility $K$ of symmetric \gls{NM} at saturation density $n_0$ and the binding energy $E_0 \approx 15.8\; MeV$, while the 10 term is modified from \citep{than2010ufr} to reproduce $E_{sym}(n_0) \approx 30\;MeV$, $L\approx 50\;MeV$ and to be in agreement with the ab-initio results \citep{akmal1998equation,gandolfi2010microscopic} at higher density \citep{tan2021equation}. On the other hand, the spin-dependent terms, 10 and 11, are hereby included in the 5 models by fine tuning the parameters to yield the same result as the Brueckner-Hartree-Fock (\gls{BHF}) study of spin polarized \gls{NM} \citep{vidana2002equation} as in Figure \ref{fig:bhf}.
+with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adjusted to give the corresponding values of incompressibility $K$ of symmetric \gls{NM} at saturation density $n_0$ and the binding energy $E_0 \approx 15.8\; MeV$, while the 10 term is modified from \citep{than2010ufr} to reproduce $E_{sym}(n_0) \approx 30\;MeV$, $L\approx 50\;MeV$ and to be in agreement with the ab-initio results \citep{akmal1998equation,gandolfi2010microscopic} at higher density \citep{tan2021equation}. On the other hand, the spin-dependent terms, 10 and 11, are hereby included in the 5 models by fine tuning the parameters to yield the same result as the Brueckner-Hartree-Fock (\gls{BHF}) study of spin polarized \gls{NM} \citep{vidana2002equation} as in Figure \ref{fig:bhf}.
 
 \begin{figure}[ht]
         \centering
         \includegraphics[width=\textwidth]{fig/BHF_fit.eps}
-        \caption{Energy per baryon $E/A$ of symmetric \gls{NM} by the 5 CDM3Y$n$ models compared to \gls{BHF} result \citep{vidana2002equation}. The diamond and square represent the \gls{BHF} result for $\Delta_n=-\Delta_p=\pm 1$ and $\Delta_n=\Delta_p=\pm 1$ respectively with $\Delta_\tau$ being the baryon spin polarization.}
+        \caption{Energy per baryon $E/A$ of symmetric \gls{NM} by the 5 CDM3Y$n$ and BDM3Y1 models compared to \gls{BHF} result \citep{vidana2002equation}. The diamond and square represent the \gls{BHF} result for $\Delta_n=-\Delta_p=\pm 1$ and $\Delta_n=\Delta_p=\pm 1$ respectively with $\Delta_\tau$ being the baryon spin polarization.}
         \label{fig:bhf}
 \end{figure} 
 
 \begin{table}[ht]
         \centering
-        \caption{CDM3Y$n$ interaction's parameters; the 00 and 01 terms are inherited from \citep{tan2021equation}, while the 10 and 11 parameters are added by fitting with \gls{BHF} result and $K$ is the incompressibility of \gls{NM}.}
+        \caption{CDM3Y$n$ and BDM3Y1 interaction's parameters; the 00 and 01 terms are inherited from \citep{tan2021equation}, while the 10 and 11 parameters are added by fitting with \gls{BHF} result and $K$ is the incompressibility \eqref{eq:K} of spin-saturated symmetric \gls{NM} at saturation density $n_0\approx 0.17\:fm^{-3}$.}
         \label{tab:cd}
         \begin{tabular}{|C|C|C|C|C|C|C|}
                 \hline
@@ -68,6 +68,11 @@ with parameters given in Table \ref{tab:cd}. The parameters of $F_{00}$ were adj
                                                & 10 & 0.5997 & 9.1900 & 0.7514 & -4.7181 &\\
                                                & 11 & 0.3786 & 3.9435 & 2.7012 & 0.3512 &\\
                 \hline
+                \multirow{4}{*}{\text{BDM3Y1}} & 00 & 1.2521 & 0.0 & 0.0 & -1.7452 &\multirow{4}{*}{270}\\
+                                               & 01 & 0.2528 & 7.6996 & 11.0386 & 6.3568 &\\
+                                               & 10 & -1.3226 & -8.2559 & 0.0 & 17.2307 &\\
+                                               & 11 & 0.1654 & 9.7394 & 1.6714 & -1.4893 &\\
+                \hline
         \end{tabular}
 \end{table}
 
@@ -84,7 +89,7 @@ where the single-particle wave function is plane wave
 \begin{equation}
         \ket{\bm{k}\sigma\tau} = \frac{e^{i\bm{k}\cdot\bm{r}}}{ \sqrt{ \Omega}  } \chi_\sigma \chi_\tau
 \end{equation}
-$\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 n_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$, $v^{D(EX)}$ is the direct (exchange) part of the interaction determined from the singlet and triplet-even (odd) of the central \gls{NN} force. Adopting the same functional form of \eqref{eq2-11}, the direct and exchange interaction is written as
+with $\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 n_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$, $v^{D(EX)}$ is the direct (exchange) part of the interaction determined from the singlet and triplet-even (odd) of the central \gls{NN} force. Adopting the same functional form of \eqref{eq2-11}, the direct and exchange interaction is written as
 \begin{IEEEeqnarray*}{rCl}
         v^{D(EX)}(n_b,r) &=& F_{00}(n_b) v^{D(EX)}_{00}(r) + F_{10}(n_b) v^{D(EX)}_{10}(r) \bm{\sigma}\cdot\bm{\sigma'}\\
                           &&\negmedspace{}+ F_{01}(n_b) v^{D(EX)}_{01}(r) \bm{\tau}\cdot\bm{\tau'} + F_{11}(n_b) v^{D(EX)}_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})\IEEEyesnumber
@@ -100,14 +105,21 @@ with the Yukawa strengths given in Table \ref{tab:yukawa} and the density-depend
         \centering
         \caption{Yukawa strengths of the M3Y-Paris interaction \citep{tan2020spin,anantaraman1983effective}.}
         \label{tab:yukawa}
-        \begin{tabular}{|C|C|C|C|C|C|C|C|C|C|}
+        \begin{tabular}{|C|C|C|C|C|C|}
                 \hline
-                k & \mu_k & Y^D_{00} & Y^D_{10} & Y^D_{01} & Y^D_{11} & Y^{EX}_{00} & Y^{EX}_{10} & Y^{EX}_{01} & Y^{EX}_{11}\\
-                    & (fm^{-1}) & (MeV) & (MeV) & (MeV) & (MeV) & (MeV) & (MeV) & (MeV) & (MeV)\\
+                k & \mu_k & Y^D_{00} & Y^D_{10} & Y^D_{01} & Y^D_{11}\\
+                    & (fm^{-1}) & (MeV) & (MeV) & (MeV) & (MeV)\\
                 \hline
-                1 & 4.0& 11061.625 & 938.875 & 313.625 & -969.125 & -1524.25 & -3492.75 & -4118.0 & -2210.0\\
-                2 & 2.5 & -2537.5 & -36.0 & 223.5 & 450.0 & -518.75 & 795.25 & 1054.75 & 568.75\\
-                3 & 0.7072 & 0.0 & 0.0 & 0.0 & 3.4877 & -7.8474 & 2.6157 & 2.6157 & -0.8719\\
+                1 & 4.0& 11061.625 & 938.875 & 313.625 & -969.125\\
+                2 & 2.5 & -2537.5 & -36.0 & 223.5 & 450.0 \\
+                3 & 0.7072 & 0.0 & 0.0 & 0.0 & 3.4877\\
+                \hline\hline
+                k & \mu_k & Y^{EX}_{00} & Y^{EX}_{10} & Y^{EX}_{01} & Y^{EX}_{11}\\
+                    & (fm^{-1}) & (MeV) & (MeV) & (MeV) & (MeV)\\
+                \hline
+                1 & 4.0 & -1524.25 & -3492.75 & -4118.0 & -2210.0\\
+                2 & 2.5 & -518.75 & 795.25 & 1054.75 & 568.75\\
+                3 & 0.7072 & -7.8474 & 2.6157 & 2.6157 & -0.8719\\
                 \hline
         \end{tabular}
 \end{table}
@@ -136,21 +148,24 @@ with $\hat{j}_1(x)=3j_1(x)/x$ and $j_1(x)$ being the 1\textsuperscript{st} order
 In the parabolic approximation \citep{khoa1996study}, the energy density per nucleon $E/A$ can also be expanded in terms of the asymmetry $\delta$ as
 \begin{equation}
     \frac{E}{A} (n_b, \delta, \Delta_n, \Delta_p) = \frac{\varepsilon_{HF}}{n_b} = \frac{E}{A} (n_b, \delta=0, \Delta_n, \Delta_p) + S(n_b, \Delta_n, \Delta_p)\delta^2 + \mathcal{O}(\delta^4)
+    \label{eq:S}
 \end{equation}
 with $S$ being the \emph{nuclear symmetry energy}. The symmetry coefficient $J$, slope parameter $L$ and curvature $K_{sym}$ are taken by expanding the symmetry energy at saturation density $n_0$, i.e. \citep{tan2020spin,li2008recent,horowitz2014way,lattimer2014symmetry}
 \begin{equation}
     S(n_b, \Delta_n, \Delta_p) = J(\Delta_n, \Delta_p) + \frac{L(\Delta_n, \Delta_p)}{3} \left( \frac{n_b - n_0}{n_0} \right) + \frac{K_{sym}(\Delta_n, \Delta_p)}{18} \left( \frac{n_b - n_0}{n_0} \right)^2 + \ldots
+    \label{eq:pars}
 \end{equation}
 along with the nuclear incompressibility at saturation density
 \begin{equation}
     K(\Delta_n, \Delta_p) = 9 \left.\pdv{P(n_b, \delta=0,\Delta_n,\Delta_p)}{n_b}\right|_{n_b \to n_0}
+        \label{eq:K}
 \end{equation}
 These are the quantity that will be used in order to compared with the empirical values in Chapter \ref{chap:result}.
 
 \section{\textbeta-Stable Nuclear Matter}%
 \label{sec:textbeta_stable_nuclear_matter}
 
-After the \gls{HF} calculation, we were able to obtain a numerical \gls{HF} energy density $\varepsilon(n_n,n_p,\Delta_n,\Delta_p)$. However, it is in fact impossible for a \gls{NS} to exist while consisting of purely nucleon. In order to compensate for this issue, leptons ($e^-$ and $\mu^-$) have to be introduced to the matter constituents and the $npe\mu$ matter has to satisfy the \emph{\textbeta-stable} condition \citep{glendenning2012compact}, i.e.
+After the \gls{HF} calculation, we were able to obtain a numerical \gls{HF} energy density $\varepsilon_{HF}$. However, it is in fact impossible for a \gls{NS} to exist while consisting of purely nucleon. In order to compensate for this issue, leptons ($e^-$ and $\mu^-$) have to be introduced to the matter constituents and the $npe\mu$ matter has to satisfy the \emph{\textbeta-stable} condition \citep{glendenning2012compact}, i.e.
 \begin{itemize}
         \item Charge balance
                 \begin{equation}
@@ -192,7 +207,7 @@ Plus, from the \gls{HF} formalism with \gls{NM}, the baryon pressure is given by
 \begin{equation}
         P_b = n_b^2 \pdv{(\varepsilon_{HF}/n_b)}{n_b}
 \end{equation}
-Finally, we obtain the total energy density dependence on baryon density as 
+Finally, we obtain the total energy density-dependence on baryon density as 
 \begin{equation}
         \varepsilon(n_b,\Delta) = \varepsilon_{HF}(n_b,\Delta) + n_n(n_b,\Delta)m_n c^2 + n_p(n_b,\Delta)m_p c^2 + \varepsilon_e(n_b,\Delta) + \varepsilon_\mu(n_b,\Delta)
 \end{equation}
@@ -200,4 +215,20 @@ and the total pressure of \gls{NS} matter
 \begin{equation}
         P(n_b,\Delta) = P_b(n_b,\Delta) + P_e(n_b,\Delta) + P_\mu(n_b,\Delta)
 \end{equation}
-In addition, the \gls{EoS} of the \gls{NS}'s crust (low baryon density region) is adopted from the Compress Liquid Drop Model calculation \citep{douchin2000nuclear,douchin2001unified}. The complete \gls{EoS} of cold $\beta$-stable \gls{NS} matter is then given in Figure \ref{fig:s} and \ref{fig:p}.
+In addition, the \gls{EoS} of the \gls{NS}'s crust (low baryon density region) is adopted from the Compress Liquid Drop Model calculation \citep{douchin2000nuclear,douchin2001unified}. The complete \gls{EoS} of cold $\beta$-stable \gls{NS} matter is later discussed in Chapter \ref{chap:result}.
+
+\section{Density dependence of the spin polarization}%
+\label{sec:density_dependence_of_the_spin_polarization}
+
+In the above calculation, the baryon spin polarization $\Delta$ was taken to be independent of the baryon density $n_b$; however, due to the complexity of the magnetic field distribution inside the \gls{NS} \citep{fujisawa2014magnetic}, this does not fully reflect the reality. Particularly, in the inner core of the \gls{NS}, baryons are heavily compressed at extremely high density by gravity, which leads to the full degeneracy, i.e. all possible quantum states are occupied, of baryons in this region and there is no room for baryon to change its spin orientation. Along with the magnetic field, the spin polarization of baryon is expected to gradually weaken to $\Delta \approx 0$ the nearer to the \gls{NS} center, in other words, at higher density \citep{fujisawa2014magnetic,tan2020spin}. Although it's beyond the scope of the current study to accurately calculate the density-dependence of $\Delta(n_b)$, we will explore such effect by investigating different scenarios proposed by \cite{tan2020spin} based on the magnetic field distribution of magnetar obtained by \cite{fujisawa2014magnetic}, i.e.
+\begin{enumerate}[label=(\Alph*)]
+    \item The magnetic field is strongly localized in the surface region of the \gls{NS}, near the crust-core transition, and falls to $B\approx 0$ at $n_b \approx 0.18\: fm^{-3}$,
+    \item The magnetic field distribution is broader and decreases gradually to zero at a denser region, which cover both the crust and the outer core, of $n_b \approx 0.35\:fm^{-3}$.
+\end{enumerate}
+Each scenario was considered with $\Delta_0 = \Delta(n_b \approx 0)$ at the value of partial polarization $\Delta_0 = 0.6$, $0.8$ and total polarization $\Delta_0 = 1.0$ as shown in Figure \ref{fig:Delta}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{fig/Delta.eps}
+    \caption{Scenarios of the density-dependence of the baryon spin polarization at 3 levels of $\Delta_0$.}
+    \label{fig:Delta}
+\end{figure} 

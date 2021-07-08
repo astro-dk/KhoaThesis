@@ -1,20 +1,25 @@
+%!TEX xelatex
 \documentclass[a4paper,12pt]{report}
-\usepackage{amsmath,amssymb,amsthm,IEEEtrantools,hyperref,esint,multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[OT1, T1]{fontenc}
+\usepackage[main=english, vietnamese]{babel}
+\usepackage{amsmath,amssymb,amsthm,IEEEtrantools,esint,multicol, hyperref}
 \usepackage{tikz,pgf,fancyhdr,pgfplots,lmodern,transparent}
-\usepackage{float, graphicx, physics, titling, bm}
+\usepackage{float, graphicx, physics, titling, bm, enumitem}
 \usepackage{array,multirow,alphabeta, natbib}
 \usepackage[font=small]{caption}
 \usepackage[export]{adjustbox}
 \usepackage[nopostdot, nonumberlist, toc, automake]{glossaries}
 \usepackage[nottoc]{tocbibind}
-\usepackage[includeheadfoot, left=1.2cm, right=1.2cm, bottom=2.6cm, top=2.6cm]{geometry}
+\usepackage[includeheadfoot, left=2.0cm, right=2.0cm, bottom=2.5cm, top=2.5cm]{geometry}
+% \usepackage{lineno}
 
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
     citecolor=blue,
     filecolor=green,      
-    urlcolor=violet, }
+    urlcolor=violet}
 
 \pgfplotsset{width=10cm,compat=1.9}
 
@@ -55,6 +60,9 @@
 \newglossaryentry{DU}{name={DU}, description={Direct Urca}}
 \newglossaryentry{PSR}{name={PSR}, description={Pulsar}}
 \newglossaryentry{CFL}{name={CFL}, description={Confident level}}
+\newglossaryentry{HI}{name={HI}, description={Heavy-ion}}
+\newglossaryentry{APR}{name={APR}, description={Akmal, Pandharipande and Ravenhall}}
+\newglossaryentry{MMC}{name={MMC}, description={Microscopic Monte Carlo}}
 
 \newcolumntype{R}{>{$}r<{$}}
 \newcolumntype{C}{>{$}c<{$}}
@@ -107,6 +115,19 @@
 
         \captionsetup{width=0.9\linewidth}
 
+%         \chapter*{Abstract}
+%         \label{chap:abstract}
+%         \addcontentsline{toc}{chapter}{\nameref{chap:abstract}}
+%         \input{chap/0_abstract.tex}
+
+%         \begin{otherlanguage}{vietnamese}
+%         \chapter*{Tóm tắt}
+%         \label{chap:abstract_vn}
+%         \addcontentsline{toc}{chapter}{\nameref{chap:abstract_vn}}
+%         \input{chap/0_abstract_vn.tex}
+%         \end{otherlanguage}
+
+        % \linenumbers
         \chapter{Introduction}
         \label{chap:intro}
         \input{chap/1_intro.tex}
