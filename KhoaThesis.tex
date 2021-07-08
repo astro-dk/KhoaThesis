@@ -1,12 +1,12 @@
 %!TEX xelatex
 \documentclass[a4paper,12pt]{report}
 \usepackage[utf8]{inputenc}
-\usepackage[OT1, T1]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage[main=english, vietnamese]{babel}
 \usepackage{amsmath,amssymb,amsthm,IEEEtrantools,esint,multicol, hyperref}
 \usepackage{tikz,pgf,fancyhdr,pgfplots,lmodern,transparent}
 \usepackage{float, graphicx, physics, titling, bm, enumitem}
-\usepackage{array,multirow,alphabeta, natbib}
+\usepackage{array,multirow,alphabeta, natbib, boxedminipage}
 \usepackage[font=small]{caption}
 \usepackage[export]{adjustbox}
 \usepackage[nopostdot, nonumberlist, toc, automake]{glossaries}
@@ -25,7 +25,8 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Bachelor Thesis}
+\lhead{Final Report}
+\rhead{Bachelor Graduation}
 \cfoot{\thepage}
 \lfoot{\includegraphics[scale=0.02,valign=c]{logo/USTH_logo.png}}
 \rfoot{\includegraphics[scale=0.1,valign=c]{logo/SA_logo.png}}
@@ -69,45 +70,89 @@
 \newcolumntype{L}{>{$}l<{$}}
 
 \begin{document}
-        \begin{titlepage}
-                \centering
-                \newgeometry{top=1cm, bottom=2cm, left=2.5cm, right=2.5cm}
-                {\transparent{0.9}\includegraphics[scale=0.08,valign=c]{logo/USTH_logo.png}\par}
-                \vspace{0.3cm}
-                {\scshape\Large University of Science and Technology of Hanoi \par}
-                \vspace{6.3cm}
-                \rule[-9pt]{\textwidth}{0.7pt}\par
-                \rule{\textwidth}{1.6pt}\par
-                \vspace{0.3cm}
-                {\Huge\bfseries \thetitle\par}
-                \vspace{0.2cm}
-                {\Large\bfseries Bachelor Thesis\par}
-                \vspace{0.3cm}
-                \rule{\textwidth}{1.6pt}\par
-                \rule[10pt]{\textwidth}{0.7pt}\par
-                \vspace{0.5cm}
-                % {\Large \theauthor\par}
-                \begin{minipage}[t]{0.45\textwidth}
-                        \begin{flushleft}
-                                \emph{Author:}\\
-                                Nguyen Hoang Dang \textsc{Khoa}
-                        \end{flushleft}
-                \end{minipage}
-                \begin{minipage}[t]{0.3\textwidth}
-                        \begin{flushright}
-                                \emph{Supervisors:}\\
-                                Prof. Dao Tien \textsc{Khoa}\\
-                                Dr. Ngo Hai \textsc{Tan}
-                        \end{flushright}
-                \end{minipage}
-                % \vspace{0.2cm}
-                % {\large\bfseries BI9-128\par}
-                \vfill
-                {\large \thedate\par}
-        \end{titlepage}  
+        % My title page
+        % \begin{titlepage}
+        %         \centering
+        %         \newgeometry{top=1cm, bottom=2cm, left=2.5cm, right=2.5cm}
+        %         {\transparent{0.9}\includegraphics[scale=0.08,valign=c]{logo/USTH_logo.png}\par}
+        %         \vspace{0.3cm}
+        %         {\scshape\Large University of Science and Technology of Hanoi \par}
+        %         \vspace{6.3cm}
+        %         \rule[-9pt]{\textwidth}{0.7pt}\par
+        %         \rule{\textwidth}{1.6pt}\par
+        %         \vspace{0.3cm}
+        %         {\Huge\bfseries \thetitle\par}
+        %         \vspace{0.2cm}
+        %         {\Large\bfseries Bachelor Thesis\par}
+        %         \vspace{0.3cm}
+        %         \rule{\textwidth}{1.6pt}\par
+        %         \rule[10pt]{\textwidth}{0.7pt}\par
+        %         \vspace{0.5cm}
+        %         % {\Large \theauthor\par}
+        %         \begin{minipage}[t]{0.45\textwidth}
+        %                 \begin{flushleft}
+        %                         \emph{Author:}\\
+        %                         Nguyen Hoang Dang \textsc{Khoa}
+        %                 \end{flushleft}
+        %         \end{minipage}
+        %         \begin{minipage}[t]{0.3\textwidth}
+        %                 \begin{flushright}
+        %                         \emph{Supervisors:}\\
+        %                         Prof. Dao Tien \textsc{Khoa}\\
+        %                         Dr. Ngo Hai \textsc{Tan}
+        %                 \end{flushright}
+        %         \end{minipage}
+        %         % \vspace{0.2cm}
+        %         % {\large\bfseries BI9-128\par}
+        %         \vfill
+        %         {\large \thedate\par}
+        % \end{titlepage}  
+        
+        % One from USTH
+        \begin{boxedminipage}[t]{15.8cm}
+            \thispagestyle{empty}
+            \centering
+            {\scshape\Large University of Science and Technology of Hanoi \par}
+            {\Large\bfseries \MakeUppercase{Undergraduate School} \par}
+            \vspace{0.5cm}
+            {\transparent{0.9}\includegraphics[scale=0.08,valign=c]{logo/USTH_logo.png}\par}
+            \vspace{0.5cm}
+            {\Large\bfseries\MakeUppercase{Final Report}\par}
+            {\LARGE\bfseries\MakeUppercase{Bachelor Graduation}\par}
+            \vspace{0.4cm}
+            {\large by\par}
+            \vspace{0.3cm}
+            {\Large\bfseries \theauthor\par}
+            \vspace{1.5cm}
+            {\Large Project:\par}
+            {\huge \MakeUppercase{\thetitle}\par}
+            \vspace{2cm}
+            {\Large
+            \begin{tabular}{p{3cm} p{7cm}}
+                Supervisors: & Prof.Dr. \textbf{Dao Tien Khoa}\\
+                             & Dr. \textbf{Ngo Hai Tan}
+            \end{tabular}
+            }
+            \vspace{1cm}
+            {\Large
+            \begin{tabular}{p{3cm} p{7cm}}
+                Jury: & 
+            \end{tabular}
+            }
+            % \vspace{1.5cm}
+            \vfill
+            {\large\par}
+        \end{boxedminipage}
         
         \restoregeometry
         \tableofcontents
+        \pagenumbering{roman}
+        \setcounter{page}{1}
+
+        \chapter*{Acknowledgement}
+        \label{chap:acknowledgement}
+        \addcontentsline{toc}{chapter}{\nameref{chap:acknowledgement}}
+        \input{chap/0_acknowledgement.tex}
 
         \printglossary[title={List of Abbreviations}]
         \listoftables
@@ -115,20 +160,22 @@
 
         \captionsetup{width=0.9\linewidth}
 
-%         \chapter*{Abstract}
-%         \label{chap:abstract}
-%         \addcontentsline{toc}{chapter}{\nameref{chap:abstract}}
-%         \input{chap/0_abstract.tex}
+        \chapter*{Abstract}
+        \label{chap:abstract}
+        \addcontentsline{toc}{chapter}{\nameref{chap:abstract}}
+        \input{chap/0_abstract.tex}
 
-%         \begin{otherlanguage}{vietnamese}
-%         \chapter*{Tóm tắt}
-%         \label{chap:abstract_vn}
-%         \addcontentsline{toc}{chapter}{\nameref{chap:abstract_vn}}
-%         \input{chap/0_abstract_vn.tex}
-%         \end{otherlanguage}
+        \begin{otherlanguage}{vietnamese}
+        \chapter*{Tóm tắt}
+        \label{chap:abstract_vn}
+        % \addcontentsline{toc}{chapter}{\nameref{chap:abstract_vn}}
+        \input{chap/0_abstract_vn.tex}
+        \end{otherlanguage}
 
         % \linenumbers
         \chapter{Introduction}
+        \setcounter{page}{1}
+        \pagenumbering{arabic}
         \label{chap:intro}
         \input{chap/1_intro.tex}
 
