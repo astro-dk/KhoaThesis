@@ -1,17 +1,21 @@
 \section{Hartree-Fock calculation of asymmetric nuclear matter}%
 \label{sec:hartree_fock_calculation_of_asymmetric_nuclear_matter}
 
-Due to the lack of a exact theory to describe the nucleon-nucleon (\gls{NN}) interaction, a model need to be imposed and fit with experimental measurement or theoretical calculation results. Plus, for a system as massive as a \gls{NS}, deducing the \gls{EoS} using the \emph{ab initio} method, i.e. solving the Schr\"{o}dinger equation over all particles, is simply impossible, therefore an \emph{effective interaction} must be used \citep{greiner1996nuclear}. In this section, we only limit ourselves to two-body interaction, thus, the \gls{NN} potential can be expressed in the form of
+In this section, we only limit ourselves to two-body interaction, thus, the nucleon-nucleon (\gls{NN}) potential can be expressed in the form of
 \begin{equation}
         v = v(\bm{r}, \bm{r'}, \bm{p}, \bm{p'}, \bm{\sigma}, \bm{\sigma'}, \bm{\tau}, \bm{\tau'})
         \label{eff_interaction}
 \end{equation}
 where the primed and unprimed variables indicate the properties of 2 nucleons respectively, in which $\bm{r}$ is the particle's position, $\bm{p}$ is its momentum, $\bm{\sigma}$ is its intrinsic spin and $\bm{\tau}$ is its isospin.\par
-The functional form of $v$ in \eqref{eff_interaction} cannot freely take any form but is constrained by many invariance requirements \citep{greiner1996nuclear}, namely the translational, Galilei, rotational, isospin, parity and time reversal invariance. Having such considerations, developing further the M3Y-Paris interaction, which was used by the \gls{HF} study of \gls{NM} \citep{loan2011equation, tan2016mean, tan2020spin,tan2021equation} and the folding model study of \gls{NN} scattering \citep{khoa1997nuclear,khoa2000generalized},
+The functional form of $v$ in \eqref{eff_interaction} cannot freely take any form but is constrained by many invariance requirements \citep{greiner1996nuclear}, namely the translational, Galilei, rotational, isospin, parity and time reversal invariance. Having such considerations, the central component of \gls{NN} interaction potential is expressed as function of the distance $r$ between interacting nucleons
 \begin{equation}
         v = v_{00}(r) + v_{10}(r) \bm{\sigma}\cdot\bm{\sigma'} + v_{01}(r) \bm{\tau}\cdot\bm{\tau'} + v_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})
 \end{equation}
-by adding a density-dependent form factor $F_{\sigma\tau}(n_b)$ to each term gives the direct (exchange) part of the CDM3Y$n$ interactions, determined from the singlet and triplet-even (odd) component of the central \gls{NN} force
+There exists another composition of the interaction, i.e. the \emph{spin-orbit} terms, however, as stated by \cite{vidana2016role}, their contributions are much smaller than the central one, and have yet to be included in the present study. Due to the lack of an exact theory to describe the \gls{NN} interaction, a model needs to be imposed and fit with experimental measurement or theoretical calculation results. Furthermore, for a system as massive as a \gls{NS}, deducing the \gls{EoS} of the matter using the \emph{ab initio} method, i.e. solving the Schr\"{o}dinger equation over all particles, is impossible; therefore an \emph{effective interaction} must be used \citep{greiner1996nuclear}. Here, among various interaction models, the CDM3Y$n$ interaction was chosen. This interaction is constructed based on the M3Y-Paris interaction, which was used successfully in the \gls{HF} study of \gls{NM} \citep{loan2011equation, tan2016mean, tan2020spin,tan2021equation} and the folding model study of \gls{NN} scattering \citep{khoa1997nuclear,khoa2000generalized}, with the direct (exchange) central terms being expressed as
+\begin{equation}
+    v^{D(EX)} = v^{D(EX)}_{00}(r) + v^{D(EX)}_{10}(r) \bm{\sigma}\cdot\bm{\sigma'} + v^{D(EX)}_{01}(r) \bm{\tau}\cdot\bm{\tau'} + v^{D(EX)}_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})
+\end{equation}
+The density-dependence of the \gls{NN} interaction is encoded into an additional form factor $F_{\sigma\tau}(n_b)$ multplied to each $\sigma\tau$-term, which gives rise to the explicit form of the CDM3Y$n$ interactions, i.e.
 \begin{IEEEeqnarray*}{rCl}
         v^{D(EX)}(n_b,r) &=& F_{00}(n_b) v^{D(EX)}_{00}(r) + F_{10}(n_b) v^{D(EX)}_{10}(r) \bm{\sigma}\cdot\bm{\sigma'}\\
                           &&\negmedspace{}+ F_{01}(n_b) v^{D(EX)}_{01}(r) \bm{\tau}\cdot\bm{\tau'} + F_{11}(n_b) v^{D(EX)}_{11}(r) (\bm{\sigma}\cdot\bm{\sigma'})(\bm{\tau}\cdot\bm{\tau'})\IEEEyesnumber
@@ -21,7 +25,7 @@ where each radial term is the superposition of 3 Yukawa potentials
 \begin{equation}
     v^{D(EX)}_{\sigma\tau}(r) = \sum^{3}_{k=1} Y^{D(EX)}_{\sigma\tau}(k) \frac{\exp(-\mu_k r)}{\mu_k r} 
 \end{equation}
-with the Yukawa strengths given in Table \ref{tab:yukawa} and the form factor $F_{\sigma\tau}(n_b)$ shared the functional form \citep{khoa1997nuclear,tan2020spin,tan2021equation,than2010ufr}
+with the Yukawa strengths given in Table \ref{tab:yukawa}. The form factors $F_{\sigma\tau}(n_b)$ shared the functional form \citep{khoa1997nuclear,tan2020spin,tan2021equation,than2010ufr}
 \begin{equation}
         F_{\sigma\tau}(n) = C_{\sigma\tau} [1 + \alpha_{\sigma\tau} \exp(-\beta_{\sigma\tau}n) + \gamma_{\sigma\tau}n]
 \end{equation}
@@ -104,13 +108,14 @@ In \gls{HF} formalism, the total \gls{HF} energy of the system can be expressed 
           && \left. \negmedspace{} + \mel**{\bm{k}\sigma\tau,\bm{k'}\sigma'\tau'}{v^{EX}}{\bm{k'}\sigma\tau,\bm{k}\sigma'\tau'} \right]\IEEEyesnumber
           \label{eqE}
 \end{IEEEeqnarray*}  
-with $\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 n_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$.
+with $\Omega$ being the spatial volume of the system, $k_F^{\sigma\tau} = (6\pi^2 n_{\sigma\tau})^{1/3}$ is the Fermi momentum corresponding to spin $\sigma$ and isospin $\tau$, the first double summation is the \emph{kinetic energy} of the system, while the other being its \emph{potential energy}.
 
 Dividing \eqref{eqE} by the system total volume $\Omega$, the energy density of the \gls{NM} is separated into the kinetic term $\varepsilon_{kin}$ and the potential terms $\varepsilon_{\sigma\tau}$, i.e.
 \begin{equation}
         \varepsilon_{HF} = \frac{E_{HF}}{\Omega} = \varepsilon_{kin} + F_{00}(n_b) \varepsilon_{00} + F_{01}(n_b) \varepsilon_{01} + F_{10}(n_b) \varepsilon_{10} + F_{11}(n_b) \varepsilon_{11}
 \end{equation}
 The final expressions of each terms of the energy density are
+{\allowdisplaybreaks
 \begin{IEEEeqnarray}{rCl}
         \varepsilon_{kin} &=& \frac{3}{10} \sum^{}_{\sigma\tau} \frac{\hbar^2 (k_F^{\sigma\tau})^2}{m_\tau} n_{\sigma\tau}\\
         \varepsilon_{00} &=& \frac{1}{2} \left[ n_b^2 J^D_{00} + \int {A^2_{00} v^{EX}_{00}(r)} \: d^3 r \right] \\
@@ -118,6 +123,7 @@ The final expressions of each terms of the energy density are
         \varepsilon_{01} &=& \frac{1}{2} \left[ n_b^2 J^D_{01}\delta^2 + \int {A^2_{01} v^{EX}_{01}(r)} \: d^3 r \right] \\
         \varepsilon_{11} &=& \frac{1}{2} \left[ n_b^2 J^D_{11} \left( \Delta_n \frac{1+\delta}{2} - \Delta_p \frac{1-\delta}{2} \right)^2 + \int {A^2_{11} v^{EX}_{11}(r)} \: d^3 r \right]
 \end{IEEEeqnarray}  
+}
 where $\Delta_{\tau} = (n_{\uparrow \tau} - n_{\downarrow \tau})/n_{\tau}$ is the polarization of nucleon, $\delta = (n_n - n_p)/n_b$ is the asymmetry of \gls{NM}, $J^D_{\sigma\tau} = \int v^D_{\sigma\tau}(r)\: d^3 r$ is the volume integral of the direct interaction and
 \begin{equation}
         \begin{array}{l}
@@ -170,7 +176,7 @@ Among these quantities, the incompressibility $K$ of symmetric \gls{NM} has been
     \label{tab:pars}
     \begin{tabular}{|c|C|C|C|C|C|}
         \hline
-        Interaction & \Delta_0 & J & L & K_{sym} & K\\
+        Interaction & \Delta & J & L & K_{sym} & K\\
         \hline
         \multirow{3}{*}{CDM3Y4} & 0.0 & 28.97 & 48.38 & -60.49 & 227.96\\
         \cline{2-6}
@@ -228,7 +234,7 @@ Let $\hat{\mu} = \mu_n - \mu_p$ be the leptons' chemical potential, \eqref{charg
         3\pi^2 (\hbar c)^3 n_p - \hat{\mu}^3 - \left[ \hat{\mu}^2 - (m_\mu c^2)^2 \right]^{3/2} \theta(\hat{\mu} - m_\mu c^2) = 0
 \end{equation}
 Note that only beyond the muon threshold density $\mu_e > m_\mu c^2 \approx 105.6\:MeV$ do muons appear in the system. Furthermore, under strong magnetic field like that of a magnetar, we can approximate $\Delta_n \approx -\Delta_p \approx \Delta$ and reduce the \gls{EoS} to depend on just the baryon polarization $\Delta$ alone, and the more baryon polarized, the stronger the magnetic field of the \gls{NS}.\par
-For a fixed value of $\Delta$, we are able to obtain a density function of the form $n_n (n_b, \Delta)$ and $n_p (n_b, \Delta)$, which in turn gives the lepton chemical potential $\hat{\mu}(n_b,\Delta) = \hat{\mu}(n_n,n_p)$ On the other hand, the leptons' densities are then \citep{loan2011equation}
+For a fixed value of $\Delta$, we are able to obtain a density function of the form $n_n (n_b, \Delta)$ and $n_p (n_b, \Delta)$, which in turn gives the lepton chemical potential $\hat{\mu}(n_b,\Delta) = \hat{\mu}(n_n,n_p)$ On the other hand, the leptons' densities are then
 \begin{equation}
         n_e(n_b,\Delta) = \frac{ \hat{\mu}^3(n_b,\Delta)}{ 3\pi^2 (\hbar c)^3} \quad\text{and}\quad n_\mu(n_b,\Delta) = \frac{ \Big[\hat{\mu}^2(n_b,\Delta) - (m_\mu c^2)^2\Big]^{3/2}}{ 3\pi^2 (\hbar c)^3} \theta(\hat{\mu}(n_b,\Delta)-m_\mu c^2)
 \end{equation} 
@@ -252,6 +258,8 @@ and the total pressure of \gls{NS} matter
 \begin{equation}
         P(n_b,\Delta) = P_b(n_b,\Delta) + P_e(n_b,\Delta) + P_\mu(n_b,\Delta)
 \end{equation}
+The mass-energy density of \gls{NS} matter is also defined as $\rho = \varepsilon/c^2$, which will be used as input for the \gls{TOV} equation in Chapter \ref{chap:ns_prop}.
+
 In addition, the \gls{EoS} of the \gls{NS}'s crust (very low baryon density region with $n_b \lesssim 0.01\:fm^{-3}$) is adopted from the Compress Liquid Drop Model calculation \citep{douchin2000nuclear,douchin2001unified}, which was also shown by \cite{tan2020spin} that the magnetization of the crust has little effects on \gls{NS} properties. In Figure \ref{fig:p}, we show the total pressure of \gls{NS} matter $P(n_b)$ following the \gls{HF} calculation of 4 different versions of the density-dependent \gls{NN} interaction endowed with different levels of polarization. These results are simultaneously compared with the empirical pressure obtained from the ``spectral'' \gls{EoS} inferred from the Bayesian analysis of the GW170817 event \citep{abbott2018gw170817}. It is clear that the larger $K$ an interaction version has (Table \ref{tab:pars}), the more the generated \gls{NM} can be compressed to higher pressure at high density, and the model CDM3Y4 can be excluded since it is unlikely to satisfy the constraint derived by \cite{abbott2018gw170817}, while the other versions still lie inside of the 90\% \gls{CFL} region at $\Delta\approx 0.0$. In general, the pressures calculated by these 4 models follow well the empirical values from $\approx \rho_0$ to their corresponding maximum central density, i.e. the total pressure at twice and six times nuclear saturation density is within the range $P(2\rho_0)\approx 3.5^{+2.7}_{-1.7}\times 10^{34}$ and $P(6\rho_0)\approx 9.0^{+7.9}_{-2.6}\times 10^{35}\:dyn/cm^2$ at 90\% \gls{CFL}. Plus, at increasing spin polarization, the pressure tends to be stronger, indicated by a raise of $P(\rho_b)$ most significantly at the low density region. Taking all of the \gls{EoS} constraint up until now into account, the value suggested by the empirical study tends to favor models with higher $K$ value and smaller spin polarization.
 \begin{figure}[ht!]
         \centering

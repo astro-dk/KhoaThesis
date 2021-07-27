@@ -1,43 +1,78 @@
-In close orbit with another compact companion in a binary system, the \gls{NS} is tidally deformed by strong gravitational interaction. In this chapter, we shall give a brief review of some results in the relativistic theory of tidal effects in binary system of compact objects \citep{damour2009relativistic}, as well as the explicit forms of the tidal Love numbers at several orders of contribution \citep{perot2021role}. The mass and radius of \gls{NS} are also determined with each scenario of polarization and are discussed in more details with astrophysical constraints in Section \ref{sec:tolman_oppenheimer_volkoff_equation_and_configuration_of_neutron_star}.
+The observation of the NS merger GW170817 has provided for the first time the empirical
+estimate of the tidal deformation of NS induced by strong gravitational field between 
+the two companions of a merging binary pulsar \citep{hinderer2008tidal,hinderer2010tidal}. In this chapter, 
+we discuss briefly, within the frame of General Relativity, how a static spherical NS can be
+tidally deformed by gravitation, gaining nonzero gravito-multipole moments which are
+directly proportional to the strength of gravitation \citep{damour2009relativistic}.
+The tidal deformation moments of different multipoles are determined in the present work 
+with the mean-field based EoS of spin-polarized NS matter using the explicit expressions 
+of the Love numbers given by GR \citep{perot2021role}. The obtained results for the tidal
+deformability as well as the gravitational mass $M$ and radius $R$ of \gls{NS} are 
+compared in details with the astrophysical constraints deduced from the observation 
+of GW170817.
 
-\section{Tolman-Oppenheimer-Volkoff equation and configuration of neutron star}%
-\label{sec:tolman_oppenheimer_volkoff_equation_and_configuration_of_neutron_star}
+\section{Einstein equations of relativistic neutron star}%
+\label{sec3}
+In general, the line element of metric in the static isotropic spacetime can be 
+expressed within GR  \citep{glendenning2012compact} in terms of spatial spherical 
+coordinates as
+\begin{equation}
+        ds^2 = g_{\mu\nu}dx^\mu dx^\nu=e^{2\nu(r)}c^2dt^2 - e^{2\lambda(r)}dr^2 - 
+				r^2 d\theta^2 - r^2\sin^2\theta d\phi^2, \label{metr}
+\end{equation}
+where arbitrary functions $\nu(r)$ and $\lambda(r)$ are determined locally by the
+mass-energy density enclosed within the sphere of radius $r$. In the vicinity of a 
+static spherical NS, the spacetime geometry is determined from the pressure and 
+mass-energy density of NS matter (treated as a perfect fluid), and the  
+energy-momentum tensor is obtained in \gls{GR} as
+\begin{equation}
+        T^{\mu\nu}=- Pg^{\mu\nu} + (P+\rho) u^\mu u^\nu,\ 
+				g_{\mu\nu}u^\mu u^\nu=u_\nu u_\nu=1.
+\end{equation}
+Here $P$ and $\rho$ are the pressure and mass-energy density of NS matter, respectively,
+$u^\mu = dx^\mu/d\tau$ is the local fluid 4-velocity. The Einstein's field 
+equations of neutron star are written as 
+\begin{equation}
+        G^{\mu\nu} = - \frac{8\pi G}{c^4} T^{\mu\nu}. \label{Ein} 
+\end{equation}
+Keeping the nonrelativistic limit to the static Newtonian gravitation, the 
+Einstein's field equations (\ref{Ein}) can be reduced to the following differential 
+equations which are known as Tolman-Oppenheimer-Volkoff (\gls{TOV}) equations 
+\citep{glendenning2012compact}
+\begin{eqnarray}
+\frac{d P(r)}{dr}&=& -\frac{G \rho(r)\mathcal{M}(r)}{c^2 r^2} 
+ \left[ 1+\frac{P(r)}{\rho(r)}\right] 
+\left[1+\frac{4 \pi P(r) r^3}{c^2 \mathcal{M}(r)} \right] 
+\left[ 1-\frac{2G \mathcal{M}(r)}{c^2 r} \right]^{-1}, \nonumber \\
+d\mathcal{M}(r) &=& 4\pi r^2 \rho(r)dr, \label{tov} 
+\end{eqnarray}
+where $r$ is the radial coordinate in Schwarzschild metric (\ref{metr}), and 
+$\mathcal{M}(r)$ is the gravitational mass enclosed within sphere of radius $r$. 
+$\rho(r)$ and $P(r)$ are the mass-energy density and pressure of NS matter at 
+distance $r$ from the star center, respectively. TOV equations (\ref{tov}) are 
+integrated from $r=0$ to the surface of NS, with the star radius $R$ given by 
+$P(R)=0$. Other boundary conditions are 
+\begin{align}
+\mathcal{M}(0)=0, \quad \rho(0)=\rho_{\rm c}, \quad P(0)=P_{\rm c},\quad \mathcal{M}(R)=M.   
+\end{align}
+The solutions of the TOV equations \eqref{tov} obtained with the given \gls{EoS}
+of NS matter readily give the density profiles of the mass and pressure of 
+\gls{NS} matter as functions of distance $r$ from the star center. The total mass 
+$M$ and radius $R$ of NS can be obtained from the profiles of central pressure 
+$P_{\rm c}$ and mass-energy density $\rho_{\rm c}$.
 
-Suppose the \gls{NS} to be static and spherically symmetric, the metric elements are then \citep{glendenning2012compact}
-\begin{equation}
-        \dd s^2 = g_{\mu\nu} \dd x^\mu \dd x^\nu = e^{2\nu(r)}c^2 \dd t^2 - e^{2\lambda(r)} \dd r^2 - r^2 \dd \theta^2 - r^2\sin^2\theta \dd \phi^2
-\end{equation}
-Consider the \gls{NS} matter to be perfect fluid, the energy-momentum tensor of its has the from of
-\begin{equation}
-        T^{\mu\nu} = - Pg^{\mu\nu} + (P + \varepsilon) u^\mu u^\nu
-\end{equation}
-where $u^\mu = dx^\mu/d\tau$ is the local fluid 4-velocity. Solving the Einstein's field equation
-\begin{equation}
-        G^{\mu\nu} = - \frac{8\pi G}{c^4} T^{\mu\nu} 
-\end{equation}
-gives the Tolman-Oppenheimer-Volkoff (\gls{TOV}) equation \citep{glendenning2012compact}
-\begin{IEEEeqnarray}{rCl}
-        \dv{P}{r} &=& - \frac{G\varepsilon m}{c^2 r^2} \left( 1+ \frac{P}{\varepsilon} \right) \left( 1+ \frac{4\pi P r^3}{m c^2}  \right) \left( 1- \frac{2Gm}{c^2 r}  \right)^{-1}\label{tov}\\
-        \dv{m}{r} &=& \frac{4\pi r^2\varepsilon}{c^2}
-\end{IEEEeqnarray}  
-where $\varepsilon$ and $P$ are the \gls{EoS} obtained from the CDM3Y$n$ interactions from the \gls{HF} calculation previously evaluated. Additional boundary conditions are
-\begin{equation*}
-        P(0)=P_c;\qquad P(R)=0;\qquad m(0)=0;\qquad m(R)=M
-\end{equation*}
-By solving the \gls{TOV} equation \eqref{tov} with the aid of an \gls{EoS}, one is able to obtain a density (or mass or pressure) profile of the \gls{NS} matter as a function of distance to the stellar center, and with each value of the central pressure $P_c$, an unique \gls{NS} of mass $M$ and radius $R$ is generated. Thus, by varying the center pressure $P_c$, a relation between $M$ and $R$ of the \gls{NS} corresponding with each \gls{EoS} can be found.
-
-Beside, due to the complexity of the magnetic field distribution inside a magnetar \citep{fujisawa2014magnetic}, a density-independent $\Delta$ of \gls{NS} matter does not fully reflect the reality. Particularly, in the inner core of the magnetar, baryons are heavily compressed at extremely high density by gravity, which leads to the full degeneracy, i.e. all possible quantum states are occupied, of baryons in this region and there is no room for baryon to change its spin orientation. Along with the magnetic field, the spin polarization of baryon is expected to gradually weaken to $\Delta \approx 0$ the nearer to the stellar center, in other words, at higher density \citep{fujisawa2014magnetic,tan2020spin}. Although it's beyond the scope of the current study to precisely calculate the density-dependence of $\Delta(n_b)$, we will explore such effect by investigating different scenarios proposed by \cite{tan2020spin} based on the magnetic field distribution of magnetar modelled by \cite{fujisawa2014magnetic}, i.e.
-\begin{enumerate}[label=(\Alph*)]
-    \item The magnetic field is strongly localized in the surface region of the magnetar, near the crust-core transition, and falls to $B\approx 0$ at $n_b \approx 0.18\: fm^{-3}$,
-    \item The magnetic field distribution is broader and decreases gradually to zero at a denser region, which cover both the crust and the outer core, of $n_b \approx 0.35\:fm^{-3}$.
-\end{enumerate}
-Each scenario was considered with $\Delta_0 = \Delta(n_b \approx 0)$ at the value of partial polarization $\Delta_0 = 0.6$, $0.8$ and total polarization $\Delta_0 = 1.0$ as shown in Figure \ref{fig:Delta}
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=\textwidth]{fig/Delta.eps}
     \caption{Scenarios of the density-dependence of the baryon spin polarization at 3 levels of $\Delta_0$.}
     \label{fig:Delta}
 \end{figure} 
+Beside, due to the complexity of the magnetic field distribution inside a magnetar \citep{fujisawa2014magnetic}, a density-independent $\Delta$ of \gls{NS} matter does not fully reflect the reality. Particularly, in the inner core of the magnetar, baryons are heavily compressed at extremely high density by gravity, which leads to the full degeneracy, i.e. all possible quantum states are occupied, of baryons in this region and there is no room for baryon to change its spin orientation. Along with the magnetic field, the spin polarization of baryon is expected to gradually weaken to $\Delta \approx 0$ the nearer to the stellar center, in other words, at higher density \citep{fujisawa2014magnetic,tan2020spin}. Although it's beyond the scope of the current study to precisely calculate the density-dependence of $\Delta(n_b)$, we will explore such effect by investigating different scenarios proposed by \cite{tan2020spin} based on the magnetic field distribution of magnetar modelled by \cite{fujisawa2014magnetic}, i.e.
+\begin{enumerate}[label=(\Alph*)]
+    \item The magnetic field is strongly localized in the surface region of the magnetar, near the crust-core transition, and falls to $B\approx 0$ at $n_b \approx 0.18\: fm^{-3}$,
+    \item The magnetic field distribution is broader and decreases gradually to zero at a denser region, which cover both the crust and the outer core, of $n_b \approx 0.35\:fm^{-3}$.
+\end{enumerate}
+Each scenario was considered with $\Delta_0 = \Delta(n_b \approx 0)$ at the value of partial polarization $\Delta_0 = 0.6$, $0.8$ and total polarization $\Delta_0 = 1.0$ as shown in Figure \ref{fig:Delta}
 
 \begin{figure}[ht!]
         \centering
@@ -50,16 +85,32 @@ With each \gls{NN} interaction, a \textbeta-stable $npe\mu$ matter is generated,
 \section{Gravito-electric and gravito-magnetic deformability}%
 \label{sec:gravito_electric_and_gravito_magnetic_deformability}
 
-Analogous to the classical theory of electromagnetism, the tidal field experienced by it can be decomposed into 2 types: the \emph{gravito-electric} and \emph{gravito-magnetic} components with respective \emph{relativistic tidal moment} \citep{damour2009relativistic}
+Here we give a brief review on the theory of gravitoelectromagnetism (\gls{GEM}), as presented by \cite{mashhoon2003gravitoelectromagnetism} and \cite{damour2009relativistic}, starting from the linear perturbation approach. In a binary system of \glsplural{NS}, due to powerful gravitational effects caused by the companion, the global background inertial frame $x^{\mu} = (ct, \mathbf{x})$ and Minkowski metric $\eta_{\mu\nu}$ is perturbed to linear order, i.e.
 \begin{equation}
-        \mathcal{E}_L = \partial_{L-1} E_{a_l} \qquad\text{and}\qquad \mathcal{M}_L = c^2 \partial_{L-1} B_{a_l}
+    g_{\mu\nu} \approx \eta_{\mu\nu} + h_{\mu\nu}(x)
+\end{equation}
+With such perturbed metric tensor, the Einstein's field equation \eqref{Ein} reads
+\begin{equation}
+    \square \bar{h}_{\mu\nu} = - \frac{16\pi G}{c^4} T_{\mu\nu} \label{Ein_pert}
+\end{equation}
+where $\bar{h}_{\mu\nu} = h_{\mu\nu} - \frac{1}{2} \eta_{\mu\nu}\eta^{\rho\sigma}h_{\rho\sigma}$. Remarkably, the equation \eqref{Ein_pert} is completely analogous to the well known Maxwell's equations of classical electromagnetism
+\begin{equation}
+    \square A^\nu = 4\pi j^\nu
+\end{equation}
+with $A$ being the electromagnetic field strength tensor and $j$ being the current 4-vector. By introducing the \gls{GEM} potentials $\Phi$ and $\mathbf{A}$ as $\bar{h}_{00}=4\Phi/c^2$ and $\bar{h}_{0i} = -2A_i/c^2$, we define the \gls{GEM} fields as
+\begin{equation}
+    E_{i} = 4\partial_i\Phi + \frac{2}{c} \pdv{A_i}{t},\quad B_i = -2c\epsilon_{ijk}\partial_j A_k
+\end{equation}
+Note that these definitions differ from those in \cite{mashhoon2003gravitoelectromagnetism} by a factor of $-2$ (or $-2c$) in order to coincide with the definitions used by \cite{damour2009relativistic} for the study of \gls{NS}'s tidal properties. Plus, in the Newtonian limit, the \gls{GE} potential reduces to $\sim GM/r$, which is the classical gravitational potential. Analogous to the classical theory of electromagnetism, the tidal field experienced by it can be decomposed into 2 types: the \emph{gravito-electric} (\gls{GE}) and \emph{gravito-magnetic} (\gls{GM}) components with respective \emph{relativistic tidal moment} \citep{damour2009relativistic}
+\begin{equation}
+        \mathcal{E}_L = \partial_{L-1} E_{a_l} \qquad\text{and}\qquad \mathcal{B}_L = \partial_{L-1} B_{a_l}
 \end{equation}
 where $E_{a_l}$ and $B_{a_l}$ are the $a_l$ component of the externally generated local \gls{GE} and \gls{GM} field, $L$ represents the multi-index $(a_1, a_2,\ldots, a_l)$ and $l$ being the order of the moment. As a result, the deformation of \gls{NS} is parameterized by the \gls{GE} and \gls{GM} \emph{tidal deformabilities} $\lambda_l$ and $\sigma_l$, i.e. in leading order \citep{damour2009relativistic}
 \begin{IEEEeqnarray}{rCl}
-        \mathcal{Q}_L &=& \lambda_l \mathcal{E}_L,\\
-        \mathcal{S}_L &=& \sigma_l \mathcal{M}_L
+    \mathcal{Q}_L &=& \lambda_l \mathcal{E}_L,\label{ge}\\
+    \mathcal{S}_L &=& \sigma_l \mathcal{B}_L\label{gm}
 \end{IEEEeqnarray}
-with $\mathcal{Q}_L$ being the induced mass multipole moment, i.e. the deviation of the mass distribution from spherically symmetry at order $l$, while $\mathcal{S}_L$ is the current multipole moment in adiabatic approximation \citep{damour2009relativistic,perot2021role}. From the deformabilities, the dimensionless \gls{GE} and \gls{GM} \emph{tidal Love numbers} are defined as \citep{perot2021role}
+with $\mathcal{Q}_L$ being the induced mass multipole moment, i.e. the deviation of the mass distribution from spherically symmetry at order $l$, while $\mathcal{S}_L$ is the current multipole moment in adiabatic approximation \citep{damour2009relativistic,perot2021role}. The equations \eqref{ge} and \eqref{gm} give a direct link between the tidal field strengths and the multipole moments of the object, in which the reaction of the body is directly propertional to the field strengths. Plus, it is evident that the higher $\lambda_l$ (or $\sigma_l$) is, the stronger the \gls{NS} deforms under the same tidal field. From these deformabilities, the dimensionless \gls{GE} and \gls{GM} \emph{tidal Love numbers} are defined as \citep{perot2021role}
 \begin{equation}
         k_l = \frac{1}{2} (2l-1)!! \frac{G\lambda_l}{R^{2l+1}} \quad \text{and}\quad j_l = 4(2l-1)!! \frac{G\sigma_l}{R^{2l+1}} 
 \end{equation}
@@ -68,7 +119,7 @@ These parameters are directly related to the \gls{GE} and \gls{GM} \emph{tidal d
     \Lambda_l &=& \frac{2}{(2l-1)!!} k_l \left( \frac{c^2 R}{GM} \right)^{2l+1} \label{eq:Lambda}\\
     \Sigma_l &=& \frac{1}{4(2l-1)!!} j_l \left( \frac{c^2 R}{GM} \right)^{2l+1}
 \end{IEEEeqnarray}
-which can be potentially extracted from the signal of \gls{GW}. In order to properly calculate these parameters, let $H_l(r)$ and $\tilde{H}_l(r)$ characterize small perturbations of the static metric. These functions have to satisfy \citep{perot2021role,damour2009relativistic}
+which can be extracted from the signal of \gls{GW}. In order to properly calculate these parameters, let $H_l(r)$ and $\tilde{H}_l(r)$ characterize small perturbations of the static metric. These functions have to satisfy \citep{perot2021role,damour2009relativistic}
 \begin{IEEEeqnarray*}{rCl}
         H''_l(r) &+& H'_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r}  \right]^{-1} \left\{ \frac{2}{r} - \frac{2Gm(r)}{c^2 r^2} - \frac{4\pi G}{c^4} r[\varepsilon(r) - P(r)] \right\}\\
                  &+& H_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \Bigg\{ \frac{4\pi G}{c^4} \left[ 5\varepsilon(r) + 9P(r) + c^2 \dv{\varepsilon}{P}\left[ \varepsilon(r) + P(r) \right] \right] \\
@@ -79,7 +130,7 @@ for \gls{GE} perturbations and
         \tilde{H}''_l(r) &-& \tilde{H}'_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \frac{4\pi G}{c^4} r \left[ P(r) + \varepsilon(r) \right]\\
                          &-& \tilde{H}_l(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \left\{ \frac{l(l+1)}{r^2} - \frac{4Gm(r)}{c^2 r^3} + \theta \frac{8\pi G}{c^4} \left[ P(r) + \varepsilon(r) \right] \right\} = 0\IEEEyesnumber
 \end{IEEEeqnarray*}
-for \gls{GM} perturbations; the value of $\theta=1$ is for static fluid while irrotational fluid adopts the value $\theta=-1$. These two equations are integrated along with the \gls{TOV} equation \eqref{tov}. In addition, we have the compactness parameters $C = GM/(Rc^2)$ and define
+for \gls{GM} perturbations; the value of $\theta=1$ is for static fluid while irrotational fluid adopts the value $\theta=-1$. These equations govern the even and odd parity parts of the stationary perturbation of the background metric, as developed by \cite{damour2009relativistic}, and are integrated along with the \gls{TOV} equation \eqref{tov}. In addition, we have the compactness parameters $C = GM/(Rc^2)$ and define
 \begin{equation}
         y_l = \frac{RH'_l(R)}{H_l(R)} \quad\text{and}\quad \tilde{y}_l = \frac{R\tilde{H}'_l(R)}{\tilde{H}_l(R)}.
 \end{equation}
@@ -107,7 +158,7 @@ The explicit expressions of the first few orders of the \gls{GE} and \gls{GM} Lo
             &&\negmedspace{} \left. + 63(\tilde{y}_4 -4)C - 14(\tilde{y}_4 -5) \big]\log(1-2C)\right\}^{-1} \IEEEyesnumber
 \end{IEEEeqnarray*}
 }
-as derived by \cite{damour2009relativistic} and \cite{perot2021role}.
+as derived by \cite{perot2021role}.
 
 \begin{figure}[ht!]
         \centering
