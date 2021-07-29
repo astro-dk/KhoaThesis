@@ -15,11 +15,11 @@ of GW170817.
 \section{Einstein equations of relativistic neutron star}%
 \label{sec3.1}
 In general, the line element of metric in the static isotropic spacetime can be 
-expressed within GR  \citep{glendenning2012compact} in terms of spatial spherical 
+expressed within GR  \citep{oppenheimer1939massive} in terms of spatial spherical 
 coordinates as
 \begin{equation}
-        ds^2 = g_{\mu\nu}dx^\mu dx^\nu=e^{2\nu(r)}c^2dt^2 - e^{2\lambda(r)}dr^2 - 
-				r^2 d\theta^2 - r^2\sin^2\theta d\phi^2, \label{metr}
+        ds^2 = g_{\mu\nu}dx^\mu dx^\nu= - e^{2\nu(r)}c^2dt^2 + e^{2\lambda(r)}dr^2 + 
+				r^2 d\theta^2 + r^2\sin^2\theta d\phi^2, \label{metr}
 \end{equation}
 where arbitrary functions $\nu(r)$ and $\lambda(r)$ are determined locally by the
 mass-energy density enclosed within the sphere of radius $r$. In the vicinity of a 
@@ -27,19 +27,19 @@ static spherical NS, the spacetime geometry is determined from the pressure and
 mass-energy density of NS matter (treated as a perfect fluid), and the  
 energy-momentum tensor is obtained in \gls{GR} as
 \begin{equation}
-        T^{\mu\nu}=- Pg^{\mu\nu} + (P+\rho) u^\mu u^\nu,\ 
-				g_{\mu\nu}u^\mu u^\nu=u_\nu u_\nu=1.
+        T^{\mu\nu}= Pg^{\mu\nu} + (P+\rho) u^\mu u^\nu,\quad
+				g_{\mu\nu}u^\mu u^\nu=u_\nu u_\nu=-1.
 \end{equation}
 Here $P$ and $\rho$ are the pressure and mass-energy density of NS matter, respectively,
 $u^\mu = dx^\mu/d\tau$ is the local fluid 4-velocity. The Einstein's field 
 equations of neutron star are written as 
 \begin{equation}
-        G^{\mu\nu} = - \frac{8\pi G}{c^4} T^{\mu\nu}. \label{Ein} 
+        G^{\mu\nu} = \frac{8\pi G}{c^4} T^{\mu\nu}. \label{Ein} 
 \end{equation}
 Keeping the nonrelativistic limit to the static Newtonian gravitation, the 
 Einstein's field equations (\ref{Ein}) can be reduced to the following differential 
 equations which are known as Tolman-Oppenheimer-Volkoff (\gls{TOV}) equations 
-\citep{glendenning2012compact}
+\citep{oppenheimer1939massive}
 \begin{eqnarray}
 \frac{d P(r)}{dr}&=& -\frac{G \rho(r)\mathcal{M}(r)}{c^2 r^2} 
  \left[ 1+\frac{P(r)}{\rho(r)}\right] 
@@ -50,29 +50,29 @@ d\mathcal{M}(r) &=& 4\pi r^2 \rho(r)dr, \label{tov}
 where $r$ is the radial coordinate in Schwarzschild metric (\ref{metr}), and 
 $\mathcal{M}(r)$ is the gravitational mass enclosed within sphere of radius $r$. 
 $\rho(r)$ and $P(r)$ are the mass-energy density and pressure of NS matter at 
-distance $r$ from the star center, respectively. TOV equations (\ref{tov}) are 
+distance $r$ from the star center, respectively. The \gls{TOV} equations (\ref{tov}) are 
 integrated from $r=0$ to the surface of NS, with the star radius $R$ given by 
 $P(R)=0$. Other boundary conditions are 
 \begin{align}
 \mathcal{M}(0)=0, \quad \rho(0)=\rho_{\rm c}, \quad P(0)=P_{\rm c},\quad \mathcal{M}(R)=M.   
 \label{Bdr}
 \end{align}
-From the solutions of the TOV equations \eqref{tov} based on the pressure and mass-energy
-density of NS matter given by the considered \gls{EoS}, the correlated profiles of the mass 
+From the solutions of the \gls{TOV} equations \eqref{tov} based on the pressure and mass-energy
+density of \gls{NS} matter given by the considered \gls{EoS}, the correlated profiles of the mass 
 and pressure of \gls{NS} can be obtained as functions of distance $r$ from the star center. 
-The total mass $M$ and radius $R$ of NS are then deduced from the boundary conditions 
-for the TOV solutions.
+The total mass $M$ and radius $R$ of \gls{NS} are then deduced from the boundary conditions 
+for the \gls{TOV} solutions.
 
 \subsection*{Partial spin polarization of baryons in NS matter}
-The HF results in Chap.~2 have been obtained with the uniform (density independent)  
+The \gls{HF} results in Chap \ref{chap:hf} have been obtained with the uniform (density independent)  
 spin polarization of baryons of different strengths $\Delta$. However, the magnetic 
 field distribution inside a magnetar is much more complex \citep{fujisawa2014magnetic}, 
 and the use of a density independent $\Delta$ cannot be justified. In fact, baryons in the 
-inner core of the magnetar are tightly compressed by gravity at high densities of NS matter
+inner core of the magnetar are tightly compressed by gravity at high densities of \gls{NS} matter
 which leads to the full degeneracy so that there is no possibility for baryon to flip 
 its spin orientation. Therefore, along with the intrinsic magnetic field, the spin 
 polarization of baryons is expected to gradually weaken to $\Delta \approx 0$ at high
-densities in the center of NS \citep{fujisawa2014magnetic,tan2020spin}. Although it's beyond 
+densities in the center of \gls{NS} \citep{fujisawa2014magnetic,tan2020spin}. Although it's beyond 
 the scope of the current study to precisely calculate the density dependence of $\Delta(n_b)$, 
 we explore this effect by investigating two different scenarios proposed recently by
 \cite{tan2020spin}, based on the magnetic field distribution of magnetar modelled by 
@@ -81,7 +81,7 @@ we explore this effect by investigating two different scenarios proposed recentl
     \item The magnetic field is strongly localized in the surface region of the magnetar, 
 		near the crust-core transition, and $\Delta\to 0$ at $n_b\approx 0.18$ fm$^{-3}$,
     \item The magnetic field distribution is broader, covering both the crust and outer 
-		core of NS, and $\Delta$ decreases gradually to zero at a larger density 
+        core of \gls{NS}, and $\Delta$ decreases gradually to zero at a larger density 
 		$n_b \approx 0.35$ fm$^{-3}$. 
 \end{enumerate}
 \begin{figure}[ht!]
@@ -95,8 +95,8 @@ we explore this effect by investigating two different scenarios proposed recentl
         \centering
         \includegraphics[width=\textwidth]{fig/MR.eps}
         \caption{The correlation of the gravitational mass $M$ and radius $R$ of magnetar 
-	  given by the solutions of the TOV equations (\ref{tov}) obtained with different 
-	  EoS's of spin-polarized NS matter. The empirical constraints for \gls{NS} with 
+            given by the solutions of the \gls{TOV} equations (\ref{tov}) obtained with different 
+            EoS's of spin-polarized \gls{NS} matter. The empirical constraints for \gls{NS} with 
 				mass of $1.4M_\odot$ inferred from the GW170817 data are shown by the colored contour,
 				where the blue (red) shaded area represents the heavier (lighter) \gls{NS} 
 				\citep{abbott2018gw170817}. The dot in each line indicates the maximum \gls{NS} 
@@ -108,40 +108,40 @@ we explore this effect by investigating two different scenarios proposed recentl
 Each scenario is assumed to have a starting value of the spin polarization of baryons 
 at low densities, $\Delta_0 = 0.6$, $0.8$ and 1 as shown in Figure \ref{fig:Delta}.
 The EoS's of $\beta$-stable $npe\mu$ matter obtained with different spin polarizations of 
-baryons have been used as input for the TOV equations (\ref{tov}), and the results obtained 
+baryons have been used as input for the \gls{TOV} equations (\ref{tov}), and the results obtained 
 for the mass and radius of magnetar are shown in Figure \ref{fig:mr}. For comparison, we
-have plotted in this Figure also the empirical constraint for the mass and radius of NS 
-around $M\approx 1.4 M_\odot$ implied by the tidal deformability of NS estimated from 
-the GW signals of GW170817 \citep{abbott2018gw170817} (see more details on the tidal 
-deformation of NS in Sect.~\ref{sec3.2}), and the empirical mass limit of the second 
+have plotted in this Figure also the empirical constraint for the mass and radius of \gls{NS} 
+around $M\approx 1.4 M_\odot$ implied by the tidal deformability of \gls{NS} estimated from 
+the \gls{GW} signals of GW170817 \citep{abbott2018gw170817} (see more details on the tidal 
+deformation of \gls{NS} in Sect.~\ref{sec3.2}), and the empirical mass limit of the second 
 \gls{PSR} J0348+0432 ($M\approx 2.01^{+0.04}_{-0.04}M_\odot$) and millisecond 
 \gls{PSR} J0740+6620 ($M\approx 2.14^{+0.20}_{-0.18}M_\odot$), the heaviest \glsplural{NS} 
 observed so far. While the $M-R$ results given by 4 versions of the EoS with partial spin
 polarizations of baryons ($\Delta_0 = 0.6\sim 0.8$) are within the empirical 
-GW170817 constraint for NS with $M=1.4M_\odot$, the NS configurations starting with 
+GW170817 constraint for \gls{NS} with $M=1.4M_\odot$, the \gls{NS} configurations starting with 
 $\Delta_0 = 1.0$ seem to be out of the empirical range, as concluded recently 
 by \cite{tan2020spin} and \cite{tews2020spin}. The radius of \gls{NS} with a 
 $M\approx 1.4M_\odot$ obtained in scenario A with partial spin polarization 
 of $\Delta_0 = 0.6$ is $R_{1/4}\approx 11.2 - 12.7$ km, which agrees well
 with the empirical value $R_{1.4} \approx 11.75^{+0.86}_{-0.81}$ km deduced from 
-the joint analysis of two NS mergers GW170817 and GW190425 \citep{dietrich2020multimessenger}.
+the joint analysis of two \gls{NS} mergers GW170817 and GW190425 \citep{dietrich2020multimessenger}.
 The spin polarization of baryons significantly enlarges the radius but affects minorly 
-the mass of NS as noted by \cite{tan2020spin}. In addition, the observed masses of two 
+the mass of \gls{NS} as noted by \cite{tan2020spin}. In addition, the observed masses of two 
 heaviest pulsars \gls{PSR} J0348+0432 and \gls{PSR} J0740+6620 allow us to trace the impact 
-of the nuclear incompressibility $K$ on the NS mass. Among four versions of the in-medium 
+of the nuclear incompressibility $K$ on the \gls{NS} mass. Among four versions of the in-medium 
 NN interaction used in the present HF calculation of NM, only the CDM3Y6 
 and CDM3Y8 interactions (associated with $K\approx 252$ and 257 MeV) give the maximum 
-gravitational mass of NS close to the lower mass limit of the two heavy pulsars. These 
+gravitational mass of \gls{NS} close to the lower mass limit of the two heavy pulsars. These 
 $K$ values are slightly higher than that around 240 MeV inferred from the structure studies 
-of giant monopole resonances of finite nuclei \cite{Garg18}. In this connection we note 
+of giant monopole resonances of finite nuclei \cite{garg2018compression}. In this connection we note 
 a recent model-independent systematics of the astrophysical observations and results of the
-ab-initio calculations by Annala et al. \cite{Annala20}, which shows that the NS 
-matter in the interior of massive NS with $M\approx 2M_\odot$ seems to contain deconfined 
-baryons which form a quark-matter core in the center of NS. Such a quark core can stiffen 
-the EoS at highest densities of NS matter and contributes up to 0.25 $M_\odot$ to the 
-total NS mass  \cite{Annala20}. Therefore, a slight increase of the $K$ value given 
+ab-initio calculations by Annala et al. \cite{annala2020evidence}, which shows that the \gls{NS} 
+matter in the interior of massive \gls{NS} with $M\approx 2M_\odot$ seems to contain deconfined 
+baryons which form a quark-matter core in the center of \gls{NS}. Such a quark core can stiffen 
+the EoS at highest densities of \gls{NS} matter and contributes up to 0.25 $M_\odot$ to the 
+total \gls{NS} mass  \cite{annala2020evidence}. Therefore, a slight increase of the $K$ value given 
 by the CDM3Y6 and CDM3Y8 interactions from the adopted value might be explained 
-by a possible existence of the quark core in the center of heavy NS.  
+by a possible existence of the quark core in the center of heavy \gls{NS}.  
 
 \section{Gravito-electric and gravito-magnetic deformability}%
 \label{sec3.2}
@@ -150,7 +150,7 @@ which has a long story because of similarity between Newton law for gravitationa
 force and Coulomb law for electrostatic force \cite{mashhoon2003gravitoelectromagnetism}.
 Here we discuss briefly the basic elements of gravitoelectromagnetism (\gls{GEM}) as 
 presented by \cite{damour2009relativistic}. Assuming the linear perturbation of spacetime
-by gravitation, the global inertial frame $x^{\mu} = (ct, \mathbf{x})$ and 
+by gravitation, the global inertial frame with $x^{\mu} = (ct, \mathbf{x})$ and 
 Minkowski metric $\eta_{\mu\nu}$ can be expressed as
 \begin{equation}
     g_{\mu\nu} \approx \eta_{\mu\nu} + h_{\mu\nu}(x),
@@ -168,18 +168,32 @@ with $A$ being the electromagnetic field strength tensor and $j$ being the curre
 4-vector. By introducing the \gls{GEM} potentials $\Phi$ and $\mathbf{A}$ via 
 $\bar{h}_{00}=4\Phi/c^2$ and $\bar{h}_{0i} = -2A_i/c^2$, we define the \gls{GEM} fields as
 \begin{equation}
-E_{i} = 4\partial_i\Phi + \frac{2}{c}\pdv{A_i}{t},\quad B_i = -2c\epsilon_{ijk}\partial_j A_k.
+E_{i} = -\partial_i\Phi - \frac{1}{2c}\pdv{A_i}{t},\quad B_i = \epsilon_{ijk}\partial_j A_k.
 \end{equation}
+
+Note that in the above evaluation, the background spacetime is supposed to be flat, in which the flat Minkowski metric was endowed. However, in a binary system of \glsplural{NS}, the background metric at one \gls{NS} should be that of itself in isolation \citep{damour2009relativistic}, i.e.
+\begin{equation}
+    G^A_{\mu\nu} = G^{(0)}_{\mu\nu} + H^{(1)}_{\mu\nu} + \ldots
+\end{equation}
+where $G^{(0)}_{\mu\nu}$ is the metric created by the isolated \gls{NS} of label ``$A$'' and $H^{(1)}_{\mu\nu}$ is the perturbation caused by its companion seen from local $A$ frame. Using the notation of \cite{damour2009relativistic}, the perturbed metric takes the form
+\begin{equation}
+    G^A_{00} = -\exp(-2W^A/c^2),\quad G^A_{0a} = - \frac{4}{c^3} W^A_a.
+\end{equation}
+The \emph{gravito-electric} (\gls{GE}) and \emph{gravito-magnetic} (\gls{GM}) fields in this case are similarly defined as
+\begin{equation}
+    E^A_a = \partial_a W^A + \frac{4}{c^2} \partial_T W^A_a,\quad B^A_a = \epsilon_{abc}\partial_b(-4W^A_c)
+\end{equation}
+
 In the nonrelativistic limit to Newtonian gravitation, the \gls{GE} potential is reduced 
 to the classical gravitational potential $\sim GM/r$. In an analogy to the classical theory 
 of electromagnetism, the gravitational field surounding NS can be decomposed into 
-the \emph{gravito-electric} (\gls{GE}) and \emph{gravito-magnetic} (\gls{GM}) components 
+the \gls{GE} and \gls{GM} components 
 \citep{damour2009relativistic}
 \begin{equation}
- \mathcal{E}_L=\partial_{L-1} E_{a_l} \qquad\text{and}\qquad \mathcal{B}_L = \partial_{L-1} B_{a_l}
+    \mathcal{E}_L=\partial_{L-1} \bar{E}_{a_l} \qquad\text{and}\qquad \mathcal{B}_L = \partial_{L-1} \bar{B}_{a_l}
 \label{eq3.9}
 \end{equation}
-where $E_{a_l}$ and $B_{a_l}$ are the $a_l$ component of the local \gls{GE} and \gls{GM} 
+where $\bar{E}_{a_l}$ and $\bar{B}_{a_l}$ are the $a_l$ component of the \emph{externally-generated} local \gls{GE} and \gls{GM} 
 fields, $L$ represents the multi-index $(a_1, a_2,\ldots, a_l)$ and $l$ being the order 
 of the moment. In a binary system of two merging NS, each companion of the pair feels
 the tidal force of the gravitation field acting between them and becomes tidally
