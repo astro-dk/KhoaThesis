@@ -1,5 +1,5 @@
 %!TEX xelatex
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[main=english, vietnamese]{babel}
@@ -150,41 +150,50 @@
         \pagenumbering{roman}
         \setcounter{page}{1}
 
-        \chapter*{Acknowledgement}
+        \clearpage
+        \section*{Acknowledgement}
         \label{chap:acknowledgement}
-        \addcontentsline{toc}{chapter}{\nameref{chap:acknowledgement}}
+        \addcontentsline{toc}{section}{\nameref{chap:acknowledgement}}
         \input{chap/0_acknowledgement.tex}
 
+        \clearpage
         \printglossary[title={List of Abbreviations}]
+        \clearpage
         \listoftables
         \listoffigures
 
         \captionsetup{width=0.9\linewidth}
 
-        \chapter*{Abstract}
+        \clearpage
+        \section*{Abstract}
         \label{chap:abstract}
-        \addcontentsline{toc}{chapter}{\nameref{chap:abstract}}
+        \addcontentsline{toc}{section}{\nameref{chap:abstract}}
         \input{chap/0_abstract.tex}
 
+        \clearpage
         \begin{otherlanguage}{vietnamese}
-        \chapter*{Tóm tắt}
+        \section*{Tóm tắt}
         \label{chap:abstract_vn}
         % \addcontentsline{toc}{chapter}{\nameref{chap:abstract_vn}}
         \input{chap/0_abstract_vn.tex}
         \end{otherlanguage}
 
         % \linenumbers
-        \chapter{Introduction}
+        \numberwithin{figure}{section}
+        \numberwithin{table}{section}
+        \numberwithin{equation}{section}
+        \clearpage
+        \section{Introduction}
         \setcounter{page}{1}
         \pagenumbering{arabic}
         \label{chap:intro}
         \input{chap/1_intro.tex}
 
-        \chapter{Mean-field study of nuclear matter}
+        \section{Mean-field study of nuclear matter}
         \label{chap:hf}
         \input{chap/2_hf.tex}
 
-        \chapter{Neutron star as relativistic compact object and its tidal deformability}
+        \section{Neutron star as relativistic compact object and its tidal deformability}
         \label{chap:ns_prop}
         \input{chap/3_tov.tex}
 
@@ -192,7 +201,7 @@
 %         \label{chap:result}
 %         \input{chap/4_result.tex}
         
-        \chapter{Conclusions}
+        \section{Conclusions}
         \label{chap:conclusion}
         \input{chap/5_conclusion.tex}
 
