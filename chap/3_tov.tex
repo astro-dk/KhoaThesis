@@ -226,15 +226,15 @@ the stronger the \gls{NS} deforms under the same GE and GM tidal fields. From th
 tidal multipole moments, the dimensionless \gls{GE} and \gls{GM} \emph{tidal Love numbers} 
 are defined \citep{perot2021role} as 
 \begin{equation}
-k_\ell = \frac{1}{2} (2l-1)!! \frac{G\lambda_\ell}{R^{2l+1}} \quad \text{and}\quad 
-j_\ell = 4(2l-1)!! \frac{G\sigma_\ell}{R^{2l+1}} 
+k_\ell = \frac{1}{2} (2\ell-1)!! \frac{G\lambda_\ell}{R^{2\ell+1}} \quad \text{and}\quad 
+j_\ell = 4(2\ell-1)!! \frac{G\sigma_\ell}{R^{2\ell+1}} 
 \end{equation}
 These parameters are directly related to the \gls{GE} and \gls{GM} 
 \emph{tidal deformability parameters} as
 \begin{IEEEeqnarray}{rCl}
-    \Lambda_\ell &=& \frac{2}{(2l-1)!!} k_\ell \left(\frac{c^2 R}{GM} \right)^{2l+1}, 
+    \Lambda_\ell &=& \frac{2}{(2\ell-1)!!} k_\ell \left(\frac{c^2 R}{GM} \right)^{2\ell+1}, 
 		\label{eq:Lambda}\\
-    \Sigma_\ell &=& \frac{1}{4(2l-1)!!} j_\ell \left( \frac{c^2 R}{GM} \right)^{2l+1}.
+    \Sigma_\ell &=& \frac{1}{4(2\ell-1)!!} j_\ell \left( \frac{c^2 R}{GM} \right)^{2\ell+1}.
 \end{IEEEeqnarray}
 The observed  GW signals of the NS merger GW170817 have been analyzed to infer the
 constraint for the $\Lambda_2$ component of the tidal deformability which was then 
@@ -242,18 +242,22 @@ translated into the constraint for the gravitational mass and radius of NS shown
 in Fig.~\ref{fig:mr}. 
 
 In the present work we perform the explicit calculation of the tidal deformability 
-parameters. Let $H_\ell(r)$ and $\tilde{H}_\ell(r)$ characterize small perturbations 
-of the static metric. These functions have to satisfy 
-\citep{perot2021role,damour2009relativistic}
+parameters. With $H_\ell(r)$ and $\tilde{H}_\ell(r)$ characterizing small even and
+odd-parity perturbations on the static metric, which in turn relate directly to
+the \gls{GE} and \gls{GM} tidal moment \eqref{eq3.13} after matching the
+``internal'' and ``external'' problems as proceded by \cite{damour2009relativistic},
+the two ``master equations'' governing these two types of perturbations in the
+\gls{NS}'s interior are 
+\citep{perot2021role}
 \begin{IEEEeqnarray*}{rCl}
-        H''_\ell(r) &+& H'_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r}  \right]^{-1} \left\{ \frac{2}{r} - \frac{2Gm(r)}{c^2 r^2} - \frac{4\pi G}{c^4} r[\varepsilon(r) - P(r)] \right\}\\
-                 &+& H_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \Bigg\{ \frac{4\pi G}{c^4} \left[ 5\varepsilon(r) + 9P(r) + c^2 \dv{\varepsilon}{P}\left[ \varepsilon(r) + P(r) \right] \right] \\
-                 &-& \frac{l(l+1)}{r^2} - 4 \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \left[ \frac{Gm(r)}{c^2 r^2} + \frac{4\pi G}{c^4} rP(r) \right]^2 \Bigg\} = 0\IEEEyesnumber
+        H''_\ell(r) &+& H'_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r}  \right]^{-1} \left\{ \frac{2}{r} - \frac{2Gm(r)}{c^2 r^2} - \frac{4\pi G}{c^4} r[\rho(r)c^2 - P(r)] \right\}\\
+                 &+& H_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \Bigg\{ \frac{4\pi G}{c^4} \left[ 5\rho(r)c^2 + 9P(r) + c^2 \dv{\rho}{P}\left[ \rho(r)c^2 + P(r) \right] \right] \\
+                 &-& \frac{\ell(\ell+1)}{r^2} - 4 \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \left[ \frac{Gm(r)}{c^2 r^2} + \frac{4\pi G}{c^4} rP(r) \right]^2 \Bigg\} = 0\IEEEyesnumber
 \end{IEEEeqnarray*}
 for \gls{GE} perturbations and
 \begin{IEEEeqnarray*}{rCl}
-        \tilde{H}''_\ell(r) &-& \tilde{H}'_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \frac{4\pi G}{c^4} r \left[ P(r) + \varepsilon(r) \right]\\
-                         &-& \tilde{H}_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \left\{ \frac{l(l+1)}{r^2} - \frac{4Gm(r)}{c^2 r^3} + \theta \frac{8\pi G}{c^4} \left[ P(r) + \varepsilon(r) \right] \right\} = 0\IEEEyesnumber
+        \tilde{H}''_\ell(r) &-& \tilde{H}'_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \frac{4\pi G}{c^4} r \left[ P(r) + \rho(r)c^2 \right]\\
+                         &-& \tilde{H}_\ell(r) \left[ 1-\frac{2Gm(r)}{c^2 r} \right]^{-1} \left\{ \frac{\ell(\ell+1)}{r^2} - \frac{4Gm(r)}{c^2 r^3} + \theta \frac{8\pi G}{c^4} \left[ P(r) + \rho(r)c^2 \right] \right\} = 0\\\IEEEyesnumber
 \end{IEEEeqnarray*}
 for \gls{GM} perturbations; the value of $\theta=1$ is for static fluid while irrotational fluid adopts the value $\theta=-1$. These equations govern the even and odd parity parts of the stationary perturbation of the background metric, as developed by \cite{damour2009relativistic}, and are integrated along with the \gls{TOV} equation \eqref{tov}. In addition, we have the compactness parameters $C = GM/(Rc^2)$ and define
 \begin{equation}
@@ -288,7 +292,7 @@ as derived by \cite{perot2021role}.
 \begin{figure}[ht!]
         \centering
         \includegraphics[width=\textwidth]{fig/kl.eps}
-        \caption{\gls{GE} tidal Love number at $l$\textsuperscript{th} order $k_\ell$ as function of magnetar mass computed with 4 density-dependent \gls{NN} interaction versions at different spin polarizations. The dot at the end of each line represents the maximum gravitational mass $M$ of the magnetar generated by the corresponding \gls{EoS}.}
+        \caption{\gls{GE} tidal Love number at $\ell$\textsuperscript{th} order $k_\ell$ as function of magnetar mass computed with 4 density-dependent \gls{NN} interaction versions at different spin polarizations. The dot at the end of each line represents the maximum gravitational mass $M$ of the magnetar generated by the corresponding \gls{EoS}.}
         \label{fig:kl}
 \end{figure} 
 \begin{figure}[ht!]
@@ -297,26 +301,26 @@ as derived by \cite{perot2021role}.
     \caption{Dimensionless \gls{GE} tidal deformability parameter of 2\textsuperscript{nd} order $\Lambda_2$ of different CDM3Y$n$ models with varying $\Delta$. The vertical bar is the empirical tidal deformability constraint $\Lambda_2 \approx 190_{-120}^{+390}$ at $1.4M_\odot$, obtained from the Bayesian analysis of GW170817 data with 90\% confidence level \citep{abbott2018gw170817}.}
     \label{fig:Lambda2}
 \end{figure} 
-The results for \gls{GE} tidal Love number's dependence on \gls{NS}'s gravitational mass arose from 4 versions of the \gls{EoS} are shown in Figure \ref{fig:kl}. Similar to \cite{perot2021role}, in this result, it is clear that the higher the order $l$, the less impactful the Love number $k_\ell$ is for the tidal properties of the \gls{NS}, i.e. $k_\ell$ tends to be smaller by an order of magnitude than $k_{l-1}$, as expected from the multipole expansion. The 2\textsuperscript{nd} order is consequently dominant compared to the others. Between two scenarios A and B, at partial polarization of $\Delta_0 = 0.6$, the difference in $k_\ell$ of the same order is insignificant, except for the small difference in the low mass section. On the other hand, for the case of higher spin polarity in the \gls{NS} surface, the results are much more distinguishable, as the computation with scenario B gives rise to a ``steeper'' curve of $k_\ell$. Furthermore, in general, the maximum values of $k_\ell$ are at the common gravitational mass $M$ at all orders computed so far, and this value of $M$ seems to only depends on the value of $\Delta_0$, where the position of maximum $k_\ell$ tends to be shifted to a higher $M$ as $\Delta_0$ increases. Among these tidal parameters, the only one that has been constrained by far is the dominant 2\textsuperscript{nd} order Love number, which is investigated through the closely related dimensionless tidal deformability parameter of second order $\Lambda_2$ \eqref{eq:Lambda} and whose results are given in Figure \ref{fig:Lambda2}. In the study of \cite{abbott2018gw170817}, the range of $\Lambda_2$ is accepted to be $\Lambda_2 \approx 190^{+390}_{-120}$ at $M=1.4M_\odot$. It is interesting to note that for all cases in this study, this constraint tolerates all \glsplural{EoS} and scenarios, as well as the value of $\Delta_0$, thus no further exclusion can be done with this parameter. It's worth mentioning that the nuclear incompressibility $K$ plays a significant role in determining the tidal deformability $\Lambda_2$ as when $K$ varies from version to version (CDM3Y4 to CDM3Y8), the value of $\Lambda_2$ increases by $\approx 3$ times for the scenario A of $\Delta_0 = 0.6$ case, the same can be said for the different configuration of $\Delta(n_b)$. Testing the values of $k_\ell$ at higher orders can also be done by evaluating the tidal correction of the \gls{GW} waveform from inspiralling \glsplural{NS} within the PN theory, i.e. the \gls{GE} contribution of order $(2l+1)$PN to the phase of \gls{GW} signal is \citep{perot2021role, yagi2014multipole}
+The results for \gls{GE} tidal Love number's dependence on \gls{NS}'s gravitational mass arose from 4 versions of the \gls{EoS} are shown in Figure \ref{fig:kl}. Similar to \cite{perot2021role}, in this result, it is clear that the higher the order $\ell$, the less impactful the Love number $k_\ell$ is for the tidal properties of the \gls{NS}, i.e. $k_\ell$ tends to be smaller by an order of magnitude than $k_{\ell-1}$, as expected from the multipole expansion. The 2\textsuperscript{nd} order is consequently dominant compared to the others. Between two scenarios A and B, at partial polarization of $\Delta_0 = 0.6$, the difference in $k_\ell$ of the same order is insignificant, except for the small difference in the low mass section. On the other hand, for the case of higher spin polarity in the \gls{NS} surface, the results are much more distinguishable, as the computation with scenario B gives rise to a ``steeper'' curve of $k_\ell$. Furthermore, in general, the maximum values of $k_\ell$ are at the common gravitational mass $M$ at all orders computed so far, and this value of $M$ seems to only depends on the value of $\Delta_0$, where the position of maximum $k_\ell$ tends to be shifted to a higher $M$ as $\Delta_0$ increases. Among these tidal parameters, the only one that has been constrained by far is the dominant 2\textsuperscript{nd} order Love number, which is investigated through the closely related dimensionless tidal deformability parameter of second order $\Lambda_2$ \eqref{eq:Lambda} and whose results are given in Figure \ref{fig:Lambda2}. In the study of \cite{abbott2018gw170817}, the range of $\Lambda_2$ is accepted to be $\Lambda_2 \approx 190^{+390}_{-120}$ at $M=1.4M_\odot$. It is interesting to note that for all cases in this study, this constraint tolerates all \glsplural{EoS} and scenarios, as well as the value of $\Delta_0$, thus no further exclusion can be done with this parameter. It's worth mentioning that the nuclear incompressibility $K$ plays a significant role in determining the tidal deformability $\Lambda_2$ as when $K$ varies from version to version (CDM3Y4 to CDM3Y8), the value of $\Lambda_2$ increases by $\approx 3$ times for the scenario A of $\Delta_0 = 0.6$ case, the same can be said for the different configuration of $\Delta(n_b)$. Testing the values of $k_\ell$ at higher orders can also be done by evaluating the tidal correction of the \gls{GW} waveform from inspiralling \glsplural{NS} within the PN theory, i.e. the \gls{GE} contribution of order $(2\ell+1)$PN to the phase of \gls{GW} signal is \citep{perot2021role, yagi2014multipole}
 \begin{equation}
-    \Psi_\ell = - \sum^{2}_{i=1} \left[ \frac{5}{16} \frac{(2l-1)!! (4l+3)(l+1)}{(4l-3)(2l-3)} \Lambda_{l,i} X_i^{2l-1} x^{2l - 3/2} + \frac{9}{16} \delta_{l2} \Lambda_{2, i} \frac{X_i^4}{\eta} x^{5/2} \right] + \mathcal{O}(x^{2l-1/2})
+    \Psi_\ell = - \sum^{2}_{i=1} \left[ \frac{5}{16} \frac{(2\ell-1)!! (4\ell+3)(\ell+1)}{(4\ell-3)(2\ell-3)} \Lambda_{\ell,i} X_i^{2\ell-1} x^{2\ell - 3/2} + \frac{9}{16} \delta_{\ell 2} \Lambda_{2, i} \frac{X_i^4}{\eta} x^{5/2} \right] + \mathcal{O}(x^{2\ell-1/2})
 \end{equation}
 where $i=1,\,2$ is the index distinguishing the two \glsplural{NS} of the system, $x=\left( G\pi Mf/c^3 \right)^{2/3}$, $f$ is the \gls{GW} signal frequency, $M=M_1 + M_2$, $X_i = M_i/M$ and $\eta = M_1 M_2/M^2$.
 
-The gravito-magnetic tidal Love numbers $j_\ell$ contribute more weakly to the \gls{GW} phase compared to that of their \gls{GE} counterpart, as the \gls{GM} terms only appear from higher orders of $(2l+2)$PN, where the first correction at 6PN is given by \citep{perot2021role,yagi2017erratum}
+The gravito-magnetic tidal Love numbers $j_\ell$ contribute more weakly to the \gls{GW} phase compared to that of their \gls{GE} counterpart, as the \gls{GM} terms only appear from higher orders of $(2\ell+2)$PN, where the first correction at 6PN is given by \citep{perot2021role,yagi2017erratum}
 \begin{equation}
     \tilde{\Psi}_2 = \sum^{2}_{i=1} \frac{5}{224} \sigma_{2,i} \frac{X_i^4}{\eta} \left( X_i - 1037X_j \right)x^{7/2} + \mathcal{O}(x^{9/2})
 \end{equation}
 \begin{figure}[ht!]
         \centering
         \includegraphics[width=\textwidth]{fig/jl_stat.eps}
-        \caption{\gls{GM} tidal Love number at $l$\textsuperscript{nd} order $j_\ell$ as function of \gls{NS} mass computed with CDM3Y$n$ models of \emph{strictly static fluid} at different polarizations.}
+        \caption{\gls{GM} tidal Love number at $\ell$\textsuperscript{th} order $j_\ell$ as function of \gls{NS} mass computed with CDM3Y$n$ models of \emph{strictly static fluid} at different polarizations.}
         \label{fig:jl_stat}
 \end{figure} 
 \begin{figure}[ht!]
         \centering
         \includegraphics[width=\textwidth]{fig/jl_irrot.eps}
-        \caption{\gls{GM} tidal Love number at $l$\textsuperscript{nd} order $j_\ell$ as function of \gls{NS} mass computed with CDM3Y$n$ models of \emph{irrotational fluid} at different polarizations.}
+        \caption{\gls{GM} tidal Love number at $\ell$\textsuperscript{th} order $j_\ell$ as function of \gls{NS} mass computed with CDM3Y$n$ models of \emph{irrotational fluid} at different polarizations.}
         \label{fig:jl_irrot}
 \end{figure} 
-The \gls{GM} tidal Love numbers of second, third and fourth order computed with 4 different \glsplural{EoS} are shown in Figure \ref{fig:jl_stat} for strictly static fluid and \ref{fig:jl_irrot} for irrotational fluid. Apart from the same trends as the \gls{GE} tidal Love numbers discussed previously, the \gls{GM} Love numbers' values do not have much variation as $\Delta_0$ increases in each scenario, as the shape of each curves in Figure \ref{fig:jl_stat} doesn't differ far from each others except for the difference in range of gravitational mass $M$. The value of $j_\ell$ corresponding to the \gls{GM} pertubation of irrotational fluid (Figure \ref{fig:jl_irrot}), on the other hand, stands out from the other two types of Love numbers, where its value is completely negative, albeit having the same magnitude as that of static fluid, this type of fluid motion is stated to be more realistic in this case due to it being driven by the tides \citep{perot2021role,pani2018magnetic}. In this case, the lines traced by each interation appear to reach maximum value at the maximum $M$ at the leading terms only, rather than having a local maxima in between. The dominance of the 2\textsuperscript{nd} order terms are clear in all cases, where the difference of around one order of magnitude is maintained. Notably, for the \gls{GM} terms corresponding with each \gls{NN} interaction, at higher order $l$, the \gls{NS} mass at maximum $j_\ell$ seems to become smaller. One more interesting result is that the magnitudes of $j_\ell$ for two types of fluid are also comparable but is smaller than their \gls{GE} counterpart by one order of magnitude, similar to the conclusion reached by \cite{perot2021role}.
+The \gls{GM} tidal Love numbers of second, third and fourth order computed with 4 different \glsplural{EoS} are shown in Figure \ref{fig:jl_stat} for strictly static fluid and \ref{fig:jl_irrot} for irrotational fluid. Apart from the same trends as the \gls{GE} tidal Love numbers discussed previously, the \gls{GM} Love numbers' values do not have much variation as $\Delta_0$ increases in each scenario, as the shape of each curves in Figure \ref{fig:jl_stat} doesn't differ far from each others except for the difference in range of gravitational mass $M$. The value of $j_\ell$ corresponding to the \gls{GM} pertubation of irrotational fluid (Figure \ref{fig:jl_irrot}), on the other hand, stands out from the other two types of Love numbers, where its value is completely negative, albeit having the same magnitude as that of static fluid, this type of fluid motion is stated to be more realistic in this case due to it being driven by the tides \citep{perot2021role,pani2018magnetic}. In this case, the lines traced by each interation appear to reach maximum value at the maximum $M$ at the leading terms only, rather than having a local maxima in between. The dominance of the 2\textsuperscript{nd} order terms are clear in all cases, where the difference of around one order of magnitude is maintained. Notably, for the \gls{GM} terms corresponding with each \gls{NN} interaction, at higher order $\ell$, the \gls{NS} mass at maximum $j_\ell$ seems to become smaller. One more interesting result is that the magnitudes of $j_\ell$ for two types of fluid are also comparable but is smaller than their \gls{GE} counterpart by one order of magnitude, similar to the conclusion reached by \cite{perot2021role}.
